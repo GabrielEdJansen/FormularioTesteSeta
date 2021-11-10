@@ -112,6 +112,42 @@ function _init(data, info) {
             const SupAproJusti = map.get("SupAproJusti");
             const NomDir = map.get("NomDir");
             const DirAproJusti = map.get("DirAproJusti");
+
+
+            document.getElementById("selectTipFor").setAttribute("value", selectTipFor);
+            document.getElementById("DatSol").setAttribute("value", DatSol);
+            document.getElementById("Fornec").setAttribute("value", Fornec);
+            document.getElementById("Cnpj").setAttribute("value", Cnpj);
+            document.getElementById("Proj").setAttribute("value", Proj);
+            document.getElementById("ConFin").setAttribute("value", ConFin);
+            document.getElementById("CenCus").setAttribute("value", CenCus);
+            document.getElementById("VlrTot").setAttribute("value", VlrTot);
+            document.getElementById("DatPag").setAttribute("value", DatPag);
+            document.getElementById("NumNf").setAttribute("value", NumNf);
+            document.getElementById("DatPre").setAttribute("value", DatPre);
+            document.getElementById("ObsPag").setAttribute("value", ObsPag);
+            document.getElementById("DescParUm").setAttribute("value", DescParUm);
+            document.getElementById("VlrParUm").setAttribute("value", VlrParUm);
+            document.getElementById("DatParUm").setAttribute("value", DatParUm);
+            document.getElementById("CodBolUm").setAttribute("value", CodBolUm);
+            document.getElementById("DescParDois").setAttribute("value", DescParDois);
+            document.getElementById("VlrParDois").setAttribute("value", VlrParDois);
+            document.getElementById("DatParDois").setAttribute("value", DatParDois);
+            document.getElementById("CodBolDois").setAttribute("value", CodBolDois);
+            document.getElementById("DescParTres").setAttribute("value", DescParTres);
+            document.getElementById("VlrParTres").setAttribute("value", VlrParTres);
+            document.getElementById("DatParTres").setAttribute("value", DatParTres);
+            document.getElementById("CodBolTres").setAttribute("value", CodBolTres);
+            document.getElementById("TotalPagarPar").setAttribute("value", TotalPagarPar);
+            document.getElementById("ForPagBanco").setAttribute("value", ForPagBanco);
+            document.getElementById("ForPagAgencia").setAttribute("value", ForPagAgencia);
+            document.getElementById("ForPagConta").setAttribute("value", ForPagConta);
+            document.getElementById("ForPagCodBarBoleto").setAttribute("value", ForPagCodBarBoleto);
+            document.getElementById("ForPagChavePix").setAttribute("value", ForPagChavePix);
+            document.getElementById("NomSuper").setAttribute("value", NomSuper);
+            document.getElementById("SupAproJusti").setAttribute("value", SupAproJusti);
+            document.getElementById("NomDir").setAttribute("value", NomDir);
+            document.getElementById("DirAproJusti").setAttribute("value", DirAproJusti);
         }
     });
 }
