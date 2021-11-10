@@ -457,10 +457,14 @@
     <div class="row">
       <div class="col-md-12">
         <label for="DirAproJusti" class="form-label">Justificativa</label>
-        <textarea id="DirAproJusti" type="textarea"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"></textarea>
+       <!--  <textarea id="DirAproJusti" type="textarea"
+          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"></textarea>-->
+
+          <textarea ng-switch-when="TextArea" rows="4" style="resize:none" tabindex="111" class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid ng-valid-required" id="DirAproJusti" name="DirAproJusti" type="text" ng-model="bindEntity.internalData[visualElement.field.name]" model-view-value="true" ng-required="fieldsConfig[visualElement.field.name].required || rules.rulesConfig[visualElement.field.name].required" ng-readonly="readOnly" ng-disabled="visualElement.field.calculationConfig || fieldsConfig[visualElement.field.name].disabled || rules.rulesConfig[visualElement.field.name].disabled" ng-blur="executeFieldEvents(visualElement.field.name, $event)" ng-keydown="onKeyDown($event)" ng-class="{'rule-invalid': rules.errorField[visualElement.field.name]}" aria-invalid="false"></textarea>
       </div>
     </div>
+
+    
 
 
 
