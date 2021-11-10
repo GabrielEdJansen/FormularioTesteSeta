@@ -154,10 +154,10 @@ function _init(data, info) {
 
 // Essa função é chamada quando o usuário clicar no botão 'Enviar'
 function _saveData(data, info) {
-    if (!isFormValid()) {
+    /*if (!isFormValid()) {
         document.getElementById("gridCheck").setAttribute("class", "form-check-input is-invalid");
         throw new Error("Os dados informados não são válidos.");
-    }
+    }*/
     let newData = {};
     let selectForm = document.getElementById("selectTipFor");
     newData.selectTipFor = selectForm.options[selectForm.selectedIndex].value;
@@ -209,20 +209,20 @@ function _rollback(data, info) {
       })*/
 }
 
-function isFormValid() {
+/*function isFormValid() {
     const isChecked = document.getElementById("gridCheck").checked;
     return isChecked;
-}
+}*/
 
 // Handler de eventos do checkbox
-function onSelect() {
+/*function onSelect() {
     const isChecked = document.getElementById("gridCheck").checked;
     if (isChecked) {
         document.getElementById("gridCheck").setAttribute("class", "form-check-input is-valid");
     } else {
         document.getElementById("gridCheck").setAttribute("class", "form-check-input is-invalid");
     }
-}
+}*/
 
 // Disabling form submissions if there are invalid fields
 (function () {
