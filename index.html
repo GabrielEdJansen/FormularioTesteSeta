@@ -98,7 +98,7 @@
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
         <script type="text/javascript">$("#VlrTot").mask("#.##0,00", { reverse: true });</script>
       </div>
-     <!-- <div class="col-md-2">
+      <!-- <div class="col-md-2">
         <label for="MultPar" class="form-label">Múltiplos ou Parcelado?</label>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="MultPar">
@@ -181,7 +181,7 @@
     </div> -->
     <!-- Seq1/Descrição Parcela 1/Valor Parcela 1/Data Parcela 1 -->
     <div class="row">
-     <!-- <div class="col-md-3">
+      <!-- <div class="col-md-3">
         <label for="SeqUm" class="form-label">Seq1</label>
         <input id="SeqUm" type="text" disabled
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
@@ -222,7 +222,7 @@
     </div>-->
     <!-- Seq2/Descrição Parcela 2/Valor Parcela 2/Data Parcela 2 -->
     <div class="row">
-     <!--  <div class="col-md-3">
+      <!--  <div class="col-md-3">
         <label for="SeqDois" class="form-label">Seq2</label>
         <input id="SeqDois" type="text" disabled
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
@@ -298,7 +298,7 @@
     <div class="row">
       <div class="col-md-12">
         <label for="TotalPagarPar" class="form-label">Total a Pagar:</label>
-        <input id="TotalPagarPar" 
+        <input id="TotalPagarPar"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
         <script type="text/javascript">$("#TotalPagarPar").mask("#.##0,00", { reverse: true });</script>
       </div>
@@ -435,7 +435,7 @@
       </div>
     </div>
     <!-- Aprovado/Reprovado -->
-   <!-- <div class="row">
+    <!-- <div class="row">
       <div class="col-md-6">
         <div class="form-checkDir">
           <input class="form-check-input" type="radio" name="form-checkDir" id="AproDir">
@@ -457,18 +457,15 @@
     <div class="row">
       <div class="col-md-12">
         <label for="DirAproJusti" class="form-label">Justificativa</label>
-       <!--  <textarea id="DirAproJusti" type="textarea"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"></textarea>-->
-
-          <textarea ng-switch-when="TextArea" rows="4" style="resize:none" tabindex="111" class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid ng-valid-required" id="DirAproJusti" name="DirAproJusti" type="text" ng-model="bindEntity.internalData[visualElement.field.name]" model-view-value="true" ng-required="fieldsConfig[visualElement.field.name].required || rules.rulesConfig[visualElement.field.name].required" ng-readonly="readOnly" ng-disabled="visualElement.field.calculationConfig || fieldsConfig[visualElement.field.name].disabled || rules.rulesConfig[visualElement.field.name].disabled" ng-blur="executeFieldEvents(visualElement.field.name, $event)" ng-keydown="onKeyDown($event)" ng-class="{'rule-invalid': rules.errorField[visualElement.field.name]}" aria-invalid="false"></textarea>
+        <textarea id="DirAproJusti" type="textarea" class="form-control" rows="5"></textarea>
       </div>
     </div>
 
-    
 
 
 
-   <!-- <div class="col-12">
+
+    <!-- <div class="col-12">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck" onclick="onSelect()" required />
         <label class="form-check-label" for="gridCheck">
