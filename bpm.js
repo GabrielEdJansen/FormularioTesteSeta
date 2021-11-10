@@ -29,8 +29,10 @@
 
 }*/
 
-/*function testeselect() {
-    $('#TipForPag').each(function () {
+function testeselect() {
+    document.getElementById('DirAproJusti').value = 'testefinal'
+   // var txtar = document.getElementsByClassName("DirAproJusti")[1];
+    /*$('#TipForPag').each(function () {
         if (this.selected) {
             alert("Pagamento selecionado")
         }
@@ -39,9 +41,8 @@
         if (this.selected) {
             alert("Adiantamento selecionado")
         }
-    });
-}*/
-
+    });*/
+}
 
 //Inicialização da API do workflow
 this.workflowCockpit = workflowCockpit({
@@ -148,6 +149,7 @@ function _init(data, info) {
             document.getElementById("SupAproJusti").setAttribute("value", SupAproJusti);
             document.getElementById("NomDir").setAttribute("value", NomDir);
             document.getElementById("DirAproJusti").setAttribute("value", DirAproJusti);
+            document.getElementById('DirAproJusti').value = DirAproJusti
         }
     });
 }
