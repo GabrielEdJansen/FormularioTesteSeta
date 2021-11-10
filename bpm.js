@@ -149,7 +149,6 @@ function _init(data, info) {
             document.getElementById("SupAproJusti").setAttribute("value", SupAproJusti);
             document.getElementById("NomDir").setAttribute("value", NomDir);
             document.getElementById("DirAproJusti").setAttribute("value", DirAproJusti);
-            document.getElementById('DirAproJusti').value = DirAproJusti
         }
     });
 }
