@@ -139,6 +139,21 @@ function calculaTotal() {
     var VlrTot11 = document.getElementById("VlrParOnze").value
     var VlrTot12 = document.getElementById("VlrParDoze").value
 
+    VlrTot1 = VlrTot1.replace(",", ".");
+    VlrTot2 = VlrTot2.replace(",", ".");
+    VlrTot3 = VlrTot3.replace(",", ".");
+    VlrTot4 = VlrTot4.replace(",", ".");
+    VlrTot5 = VlrTot5.replace(",", ".");
+    VlrTot6 = VlrTot6.replace(",", ".");
+    VlrTot7 = VlrTot7.replace(",", ".");
+    VlrTot8 = VlrTot8.replace(",", ".");
+    VlrTot9 = VlrTot9.replace(",", ".");
+    VlrTot10 = VlrTot10.replace(",", ".");
+    VlrTot11 = VlrTot11.replace(",", ".");
+    VlrTot12 = VlrTot12.replace(",", ".");
+
+
+
     if (VlrTot1 != 0) {
         VlrTot = parseFloat(VlrTot1)
     }
@@ -176,7 +191,11 @@ function calculaTotal() {
         VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5) + parseFloat(VlrTot6) + parseFloat(VlrTot7) + parseFloat(VlrTot8) + parseFloat(VlrTot9) + parseFloat(VlrTot10) + parseFloat(VlrTot11) + parseFloat(VlrTot12)
     }
 
-    //document.getElementById("TotalPagarPar").value = VlrTot
+
+    VlrTot = VlrTot.toFixed(2)
+
+    document.getElementById("TotalPagarPar").value = VlrTot
+
 }
 
 
@@ -292,7 +311,6 @@ function _init(data, info) {
             const ForPagBanco = map.get("ForPagBanco");
             const ForPagAgencia = map.get("ForPagAgencia");
             const ForPagConta = map.get("ForPagConta");
-            const ForPagCodBarBoleto = map.get("ForPagCodBarBoleto");
             const ForPagChavePix = map.get("ForPagChavePix");
 
 
@@ -373,7 +391,6 @@ function _init(data, info) {
             document.getElementById("ForPagBanco").setAttribute("value", ForPagBanco);
             document.getElementById("ForPagAgencia").setAttribute("value", ForPagAgencia);
             document.getElementById("ForPagConta").setAttribute("value", ForPagConta);
-            document.getElementById("ForPagCodBarBoleto").setAttribute("value", ForPagCodBarBoleto);
             document.getElementById("ForPagChavePix").setAttribute("value", ForPagChavePix);
 
         }
@@ -467,7 +484,6 @@ function _saveData(data, info) {
     newData.ForPagBanco = document.getElementById("ForPagBanco").value;
     newData.ForPagAgencia = document.getElementById("ForPagAgencia").value;
     newData.ForPagConta = document.getElementById("ForPagConta").value;
-    newData.ForPagCodBarBoleto = document.getElementById("ForPagCodBarBoleto").value;
     newData.ForPagChavePix = document.getElementById("ForPagChavePix").value;
 
     console.log(newData);
