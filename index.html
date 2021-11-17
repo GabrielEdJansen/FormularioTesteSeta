@@ -41,7 +41,7 @@
     <!-- Tipo de Formulario -->
     <div class="row">
       <div class="col-md-4">
-        <label for="selectTipFor" class="form-label">Tipo de Formulario</label>
+        <label required for="selectTipFor" class="form-label">Tipo de Formulario</label>
         <select name="select" id="selectTipFor" class="form-select" aria-label="Default select example">
           <option selected>Selecione o tipo do formulário</option>
           <option id="TipForPag" value="TipForPag">Pagamento</option>
@@ -54,7 +54,7 @@
     <div class="row">
       <div class="col-md-4">
         <label for="DatSol" class="form-label">Data Solicitação</label>
-        <input id="DatSol" type="date"
+        <input required id="DatSol" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
@@ -62,12 +62,12 @@
     <div class="row">
       <div class="col-md-6">
         <label for="Fornec" class="form-label">Fornecedor</label>
-        <input id="Fornec" type="text"
+        <input required id="Fornec" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
       <div class="col-md-6">
         <label for="Cnpj" class="form-label">CNPJ</label>
-        <input id="Cnpj" name="Cnpj"
+        <input id="Cnpj" name="Cnpj" required
           class="form-control ng-scope ng-touched ng-dirty ng-empty ng-valid-mask ng-valid ng-valid-parse ng-valid-required ng-valid-pattern">
         <script type="text/javascript">$("#Cnpj").mask("99.999.999-999");</script>
       </div>
@@ -76,28 +76,28 @@
     <div class="row">
       <div class="col-md-6">
         <label for="Proj" class="form-label">Projeto</label>
-        <input id="Proj" type="text"
+        <input id="Proj" type="text" required
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
       <div class="col-md-3">
         <label for="ConFin" class="form-label">Conta Financeira</label>
-        <input id="ConFin" type="text"
+        <input id="ConFin" type="text" required
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
       <div class="col-md-3">
         <label for="CenCus" class="form-label">Centro de Custo</label>
-        <input id="CenCus" type="number"
+        <input id="CenCus" type="number" required
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
     </div>
     <!-- Valor Total/Múltiplos ou Parcelado/Qtd Parcelas/Parcelas iguais? -->
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-4">
-        <label for="VlrTot" class="form-label">Valor Total </label>
+        <label for="VlrTot" class="form-label">Valor Total</label>
         <input id="VlrTot"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
         <script type="text/javascript">$("#VlrTot").mask("#.##0,00", { reverse: true });</script>
-      </div>
+      </div>-->
       <!-- <div class="col-md-2">
         <label for="MultPar" class="form-label">Múltiplos ou Parcelado?</label>
         <div class="form-check">
@@ -134,12 +134,12 @@
     <div class="row">
       <div class="col-md-6">
         <label for="DatPag" class="form-label">Data Pagamento</label>
-        <input id="DatPag" type="date"
+        <input id="DatPag" type="date" required
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
       <div class="col-md-6">
         <label for="NumNf" class="form-label">Número da NF</label>
-        <input id="NumNf" type="text"
+        <input id="NumNf" type="text" required
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
@@ -147,7 +147,7 @@
     <div class="row">
       <div class="col-md-6">
         <label for="DatPre" class="form-label">Data Prevista Recebimento NF</label>
-        <input id="DatPre" type="date"
+        <input id="DatPre" type="date" v
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
@@ -155,10 +155,79 @@
     <div class="row">
       <div class="col-md-12">
         <label for="ObsPag" class="form-label">Observação</label>
-        <input id="ObsPag" type="text"
+        <input id="ObsPag" type="text" required
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
+
+     <!---------------------------------------------------------------------------------------------------->
+     <h5>FORMA DO PAGAMENTO</h5>
+
+     <!-- Linha Html -->
+     <table id="linha" border cellpadding="0" cellpacing="0">
+       <tr>
+         <td>
+         </td>
+       </tr>
+     </table>
+     <!-- Boleto/Depósito/PIX -->
+     <!--<div class="row">
+       <div class="col-md-4">
+         <label for="ForPagBoleto" class="form-label">Boleto</label>
+         <div class="form-check">
+           <input class="form-check-input" type="checkbox" id="ForPagBoleto">
+         </div>
+       </div>
+       <div class="col-md-4">
+         <label for="ForPagDeposito" class="form-label">Depósito</label>
+         <div class="form-check">
+           <input class="form-check-input" type="checkbox" id="ForPagDeposito">
+         </div>
+       </div>
+       <div class="col-md-4">
+         <label for="ForPagPix" class="form-label">Pix</label>
+         <div class="form-check">
+           <input class="form-check-input" type="checkbox" id="ForPagPix">
+         </div>
+       </div>
+     </div>-->
+     <!-- Banco -->
+     <div class="row">
+       <div class="col-md-12">
+         <label for="ForPagBanco" class="form-label">Banco</label>
+         <input id="ForPagBanco" type="text"
+           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+       </div>
+     </div>
+     <!-- Agencia/Conta -->
+     <div class="row">
+       <div class="col-md-6">
+         <label for="ForPagAgencia" class="form-label">Agencia</label>
+         <input id="ForPagAgencia" type="text"
+           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+       </div>
+       <div class="col-md-6">
+         <label for="ForPagConta" class="form-label">Conta</label>
+         <input id="ForPagConta" type="text"
+           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+       </div>
+     </div>
+     <!-- Codigo Barras Boleto -->
+     <div class="row">
+       <div class="col-md-12">
+         <label for="ForPagCodBarBoleto" class="form-label">Codigo Barras Boleto</label>
+         <input id="ForPagCodBarBoleto" type="text"
+           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+       </div>
+     </div>
+     <!-- Chave PIX -->
+     <div class="row">
+       <div class="col-md-6">
+         <label for="ForPagChavePix" class="form-label">Chave PIX</label>
+         <input id="ForPagChavePix" type="text"
+           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+       </div>
+     </div>
     <!---------------------------------------------------------------------------------------------------->
     <h5>DESCRIÇÃO DE PAGAMENTO / PARCELAMENTO</h5>
 
@@ -180,7 +249,7 @@
       </div>
     </div> -->
     <!-- Seq1/Descrição Parcela 1/Valor Parcela 1/Data Parcela 1 -->
-    <div class="row">
+    <div class="row" id="parcela1" style="display: none;">
       <!-- <div class="col-md-3">
         <label for="SeqUm" class="form-label">Seq1</label>
         <input id="SeqUm" type="text" disabled
@@ -193,9 +262,9 @@
       </div>
       <div class="col-md-3">
         <label for="VlrParUm" class="form-label">Valor Parcela 1</label>
-        <input id="VlrParUm"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-        <script type="text/javascript">$("#VlrParUm").mask("#.##0,00", { reverse: true });</script>
+        <input id="VlrParUm" type="text" 
+          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required" placeholder="Digite o valor da parcela 1" required>
+        <script type="text/javascript">$("#VlrParUm").mask("#.##0.00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParUm" class="form-label">Data Parcela 1</label>
@@ -204,13 +273,14 @@
       </div>
     </div>
     <!-- Código Boleto 1 -->
-    <div class="row">
+    <div class="row" id="parcela1" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolUm" class="form-label">Código Boleto 1</label>
         <input id="CodBolUm" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
     </div>
+
     <!-- Parcela 2 em Boleto? -->
     <!-- <div class="row">
       <div class="col-md-3">
@@ -221,7 +291,7 @@
       </div>
     </div>-->
     <!-- Seq2/Descrição Parcela 2/Valor Parcela 2/Data Parcela 2 -->
-    <div class="row">
+    <div class="row" id="parcela2" style="display: none;">
       <!--  <div class="col-md-3">
         <label for="SeqDois" class="form-label">Seq2</label>
         <input id="SeqDois" type="text" disabled
@@ -234,9 +304,9 @@
       </div>
       <div class="col-md-3">
         <label for="VlrParDois" class="form-label">Valor Parcela 2</label>
-        <input id="VlrParDois"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-        <script type="text/javascript">$("#VlrParDois").mask("#.##0,00", { reverse: true });</script>
+        <input id="VlrParDois" type="text" 
+          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required" placeholder="Digite o valor da parcela 2">
+        <script type="text/javascript">$("#VlrParDois").mask("#.##0.00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParDois" class="form-label">Data Parcela 2</label>
@@ -245,7 +315,7 @@
       </div>
     </div>
     <!-- Código Boleto 2 -->
-    <div class="row">
+    <div class="row" id="parcela2" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolDois" class="form-label">Código Boleto 2</label>
         <input id="CodBolDois" type="text"
@@ -262,7 +332,7 @@
       </div>
     </div>-->
     <!-- Seq3/Descrição Parcela 3/Valor Parcela 3/Data Parcela 3 -->
-    <div class="row">
+    <div class="row" id="parcela3" style="display: none;">
       <!--<div class="col-md-3">
         <label for="SeqTres" class="form-label">Seq3</label>
         <input id="SeqTres" type="text" disabled
@@ -275,9 +345,9 @@
       </div>
       <div class="col-md-3">
         <label for="VlrParTres" class="form-label">Valor Parcela 3</label>
-        <input id="VlrParTres"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-        <script type="text/javascript">$("#VlrParTres").mask("#.##0,00", { reverse: true });</script>
+        <input id="VlrParTres" type="text"
+          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required" placeholder="Digite o valor da parcela 3">
+        <script type="text/javascript">$("#VlrParTres").mask("#.##0.00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParTres" class="form-label">Data Parcela 3</label>
@@ -286,109 +356,47 @@
       </div>
     </div>
     <!-- Código Boleto 3 -->
-    <div class="row">
+    <div class="row" id="parcela3" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolTres" class="form-label">Código Boleto 3</label>
         <input id="CodBolTres" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
     </div>
-
+    <div class="row">
+      <div class="col-md-6">
+        <input class="btn btn-outline-success" type="button" value="Adicionar parcela" onclick="inserirLinhaTabela()" />
+        <input class="btn btn-outline-success" type="button" value="Calcular Total das parcelas" onclick="calculaTotal()" />
+      </div>
+    </div>
     <!-- Total a Pagar -->
     <div class="row">
       <div class="col-md-12">
         <label for="TotalPagarPar" class="form-label">Total a Pagar:</label>
         <input id="TotalPagarPar"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-        <script type="text/javascript">$("#TotalPagarPar").mask("#.##0,00", { reverse: true });</script>
+        <script type="text/javascript">$("#TotalPagarPar").mask("#.##0.00", { reverse: true });</script>
       </div>
     </div>
+
     <!---------------------------------------------------------------------------------------------------->
-    <h5>FORMA DO PAGAMENTO</h5>
+  <!-- <h5>APROVAÇÃO SUPERVISOR</h5>-->
 
     <!-- Linha Html -->
-    <table id="linha" border cellpadding="0" cellpacing="0">
+    <!--<table id="linha" border cellpadding="0" cellpacing="0">
       <tr>
         <td>
         </td>
       </tr>
-    </table>
-    <!-- Boleto/Depósito/PIX -->
-    <!--<div class="row">
-      <div class="col-md-4">
-        <label for="ForPagBoleto" class="form-label">Boleto</label>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="ForPagBoleto">
-        </div>
-      </div>
-      <div class="col-md-4">
-        <label for="ForPagDeposito" class="form-label">Depósito</label>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="ForPagDeposito">
-        </div>
-      </div>
-      <div class="col-md-4">
-        <label for="ForPagPix" class="form-label">Pix</label>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="ForPagPix">
-        </div>
-      </div>
-    </div>-->
-    <!-- Banco -->
-    <div class="row">
-      <div class="col-md-12">
-        <label for="ForPagBanco" class="form-label">Banco</label>
-        <input id="ForPagBanco" type="text"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-      </div>
-    </div>
-    <!-- Agencia/Conta -->
-    <div class="row">
-      <div class="col-md-6">
-        <label for="ForPagAgencia" class="form-label">Agencia</label>
-        <input id="ForPagAgencia" type="text"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-      </div>
-      <div class="col-md-6">
-        <label for="ForPagConta" class="form-label">Conta</label>
-        <input id="ForPagConta" type="text"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-      </div>
-    </div>
-    <!-- Codigo Barras Boleto -->
-    <div class="row">
-      <div class="col-md-12">
-        <label for="ForPagCodBarBoleto" class="form-label">Codigo Barras Boleto</label>
-        <input id="ForPagCodBarBoleto" type="text"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-      </div>
-    </div>
-    <!-- Chave PIX -->
-    <div class="row">
-      <div class="col-md-6">
-        <label for="ForPagChavePix" class="form-label">Chave PIX</label>
-        <input id="ForPagChavePix" type="text"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-      </div>
-    </div>
-    <!---------------------------------------------------------------------------------------------------->
-    <h5>APROVAÇÃO SUPERVISOR</h5>
-
-    <!-- Linha Html -->
-    <table id="linha" border cellpadding="0" cellpacing="0">
-      <tr>
-        <td>
-        </td>
-      </tr>
-    </table>
+    </table>-->
     <!-- Nome Supervisor -->
-    <div class="row">
-      <div class="col-md-12">
+  <!--  <div class="row">
+      <div class="col-md-6">
         <label for="NomSuper" class="form-label">Nome Supervisor</label>
         <input id="NomSuper" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
-    </div>
+    </div>-->
     <!-- Aprovado/Reprovado -->
     <!-- <div class="row">
       <div class="col-md-6">
@@ -409,31 +417,31 @@
       </div>
     </div>-->
     <!-- Justificativa -->
-    <div class="row">
+    <!--<div class="row">
       <div class="col-md-12">
         <label for="SupAproJusti" class="form-label">Justificativa</label>
-        <textarea id="SupAproJusti" type="textarea"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">Digite aqui a sua Justificativa</textarea>
+        <input id="SupAproJusti" type="text"
+          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
-    </div>
+    </div>-->
     <!---------------------------------------------------------------------------------------------------->
-    <h5>APROVAÇÃO DIRETORIA</h5>
+   <!--  <h5>APROVAÇÃO DIRETORIA</h5>-->
 
     <!-- Linha Html -->
-    <table id="linha" border cellpadding="0" cellpacing="0">
+    <!-- <table id="linha" border cellpadding="0" cellpacing="0">
       <tr>
         <td>
         </td>
       </tr>
-    </table>
+    </table>-->
     <!-- Nome Diretor -->
-    <div class="row">
-      <div class="col-md-12">
+    <!--<div class="row">
+      <div class="col-md-6">
         <label for="NomDir" class="form-label">Nome Diretor</label>
         <input id="NomDir" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
-    </div>
+    </div>-->
     <!-- Aprovado/Reprovado -->
     <!-- <div class="row">
       <div class="col-md-6">
@@ -454,16 +462,16 @@
       </div>
     </div>-->
     <!-- Justificativa -->
-    <div class="row">
+    <!--<div class="row">
       <div class="col-md-12">
         <label for="DirAproJusti" class="form-label">Justificativa</label>
-      
-        <textarea id="DirAproJusti" type="text" class="form-control" rows="2">Digite aqui a sua Justificativa</textarea>
+        <input id="DirAproJusti" type="text"
+          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
-    </div>
+    </div>-->
 
-
-    <!-- <div class="col-12">
+    <!--<input type="button" value="teste" onclick="testeselect()" />
+     <div class="col-12">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck" onclick="onSelect()" required />
         <label class="form-check-label" for="gridCheck">
