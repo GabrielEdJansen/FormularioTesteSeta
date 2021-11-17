@@ -176,9 +176,9 @@ function calculaTotal() {
         VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5) + parseFloat(VlrTot6) + parseFloat(VlrTot7) + parseFloat(VlrTot8) + parseFloat(VlrTot9) + parseFloat(VlrTot10) + parseFloat(VlrTot11) + parseFloat(VlrTot12)
     }
 
-    VlrTot =VlrTot.toFixed(2)
-    document.getElementById("TotalPagarPar").value = VlrTot
-
+    VlrTot = VlrTot.toFixed(2)
+    VlrTotConvert = VlrTot.toString()
+    document.getElementById("TotalPagarPar").value = VlrTotConvert
 }
 
 
