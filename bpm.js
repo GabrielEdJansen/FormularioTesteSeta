@@ -175,8 +175,6 @@ function calculaTotal() {
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0) && (VlrTot4 != 0) && (VlrTot5 != 0) && (VlrTot6 != 0) && (VlrTot7 != 0) && (VlrTot8 != 0) && (VlrTot9 != 0) && (VlrTot10 != 0) && (VlrTot11 != 0) && (VlrTot12 != 0)) {
         VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5) + parseFloat(VlrTot6) + parseFloat(VlrTot7) + parseFloat(VlrTot8) + parseFloat(VlrTot9) + parseFloat(VlrTot10) + parseFloat(VlrTot11) + parseFloat(VlrTot12)
     }
-    
-    VlrTot = VlrTot.toFixed(2)
 
     document.getElementById("TotalPagarPar").value = VlrTot
 }
