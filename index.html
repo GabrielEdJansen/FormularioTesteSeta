@@ -636,12 +636,13 @@
           onclick="calculaTotal()" />
       </div>
     </div>
-    <!-- Total a Pagar -->
+  <!-- Total a Pagar -->
     <div class="row">
       <div class="col-md-12">
         <label for="TotalPagarPar" class="form-label">Total a Pagar:</label>
-        <input id="TotalPagarPar" type="text" disabled
+        <input disabled id="TotalPagarPar" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <script type="text/javascript">$("#TotalPagarPar").mask("#.##0.00", { reverse: true });</script>
       </div>
     </div>
     <!---------------------------------------------------------------------------------------------------->
