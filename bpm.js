@@ -1,48 +1,54 @@
-/*function inserirLinhaTabela() {
+function inserirLinhaTabela() {
 
-    // Captura a referência da tabela com id “minhaTabela”
-    var table = document.getElementById("minhaTabela");
-    // Captura a quantidade de linhas já existentes na tabela
-    var numOfRows = table.rows.length;
-    // Captura a quantidade de colunas da última linha da tabela
-    var numOfCols = table.rows[numOfRows - 1].cells.length;
 
-    var nNumLinha;
-    nNumLinha = numOfRows + 1;
 
-    if (nNumLinha <= 25) {
-        // Insere uma linha no fim da tabela.
-        var newRow = table.insertRow(numOfRows);
+    if (document.getElementById("VlrParUm").value == 0) {
+        let eDois = document.getElementById('parcela1');
 
-        // Faz um loop para criar as colunas
-        for (var j = 0; j < numOfCols; j++) {
-            // Insere uma coluna na nova linha 
-            newCell = newRow.insertCell(j);
-            // Insere um conteúdo na coluna
-        }
+        eDois.style.display = 'flex';
+        calculaTotal()
 
-        newCell.innerHTML = "<label  for= '" + "parcela" + nNumLinha + "' class='form-label'>Digite o valor da parcela " + nNumLinha + " </label> " + "<input id='" + "parcela" + nNumLinha + "' type='text' class='form-control'>";
-
-    } if (nNumLinha > 25) {
-        alert("O Número máximo de parcelas é 25")
+        //return 0
     }
+    if (document.getElementById("VlrParUm").value != 0) {
+        let eDois = document.getElementById('parcela2');
 
-}*/
+        eDois.style.display = 'flex';
+        calculaTotal()
 
-function testeselect() {
-    document.getElementById('DirAproJusti').value = 'testefinal'
-   // var txtar = document.getElementsByClassName("DirAproJusti")[1];
-    /*$('#TipForPag').each(function () {
-        if (this.selected) {
-            alert("Pagamento selecionado")
-        }
-    });
-    $('#TipForAdi').each(function () {
-        if (this.selected) {
-            alert("Adiantamento selecionado")
-        }
-    });*/
+        //return 0
+
+    } if (document.getElementById("VlrParDois").value != 0) {
+        let eDois = document.getElementById('parcela3');
+
+        eDois.style.display = 'flex';
+        calculaTotal()
+
+        //return 0
+
+    }
 }
+
+function calculaTotal() {
+
+    var VlrTot = 0;
+
+    var VlrTot1 = document.getElementById("VlrParUm").value
+    var VlrTot2 = document.getElementById("VlrParDois").value
+    var VlrTot3 = document.getElementById("VlrParTres").value
+
+    if (VlrTot1 != 0) {
+        VlrTot = parseFloat(VlrTot1)
+    }if ((VlrTot1 != 0) && (VlrTot2 != 0)) {
+        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2)
+    }if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0)) {
+        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3)
+    }
+    document.getElementById("TotalPagarPar").value = VlrTot
+
+}
+
+
 
 //Inicialização da API do workflow
 this.workflowCockpit = workflowCockpit({
@@ -86,7 +92,7 @@ function _init(data, info) {
             const Proj = map.get("Proj");
             const ConFin = map.get("ConFin");
             const CenCus = map.get("CenCus");
-            const VlrTot = map.get("VlrTot");
+           // const VlrTot = map.get("VlrTot");
             const DatPag = map.get("DatPag");
             const NumNf = map.get("NumNf");
             const DatPre = map.get("DatPre");
@@ -109,10 +115,10 @@ function _init(data, info) {
             const ForPagConta = map.get("ForPagConta");
             const ForPagCodBarBoleto = map.get("ForPagCodBarBoleto");
             const ForPagChavePix = map.get("ForPagChavePix");
-            const NomSuper = map.get("NomSuper");
+           /* const NomSuper = map.get("NomSuper");
             const SupAproJusti = map.get("SupAproJusti");
             const NomDir = map.get("NomDir");
-            const DirAproJusti = map.get("DirAproJusti");
+            const DirAproJusti = map.get("DirAproJusti");*/
 
 
             document.getElementById("selectTipFor").setAttribute("value", selectTipFor);
@@ -122,7 +128,7 @@ function _init(data, info) {
             document.getElementById("Proj").setAttribute("value", Proj);
             document.getElementById("ConFin").setAttribute("value", ConFin);
             document.getElementById("CenCus").setAttribute("value", CenCus);
-            document.getElementById("VlrTot").setAttribute("value", VlrTot);
+           // document.getElementById("VlrTot").setAttribute("value", VlrTot);
             document.getElementById("DatPag").setAttribute("value", DatPag);
             document.getElementById("NumNf").setAttribute("value", NumNf);
             document.getElementById("DatPre").setAttribute("value", DatPre);
@@ -145,10 +151,10 @@ function _init(data, info) {
             document.getElementById("ForPagConta").setAttribute("value", ForPagConta);
             document.getElementById("ForPagCodBarBoleto").setAttribute("value", ForPagCodBarBoleto);
             document.getElementById("ForPagChavePix").setAttribute("value", ForPagChavePix);
-            document.getElementById("NomSuper").setAttribute("value", NomSuper);
+          /*  document.getElementById("NomSuper").setAttribute("value", NomSuper);
             document.getElementById("SupAproJusti").setAttribute("value", SupAproJusti);
             document.getElementById("NomDir").setAttribute("value", NomDir);
-            document.getElementById("DirAproJusti").setAttribute("value", DirAproJusti);
+            document.getElementById("DirAproJusti").setAttribute("value", DirAproJusti);*/
         }
     });
 }
@@ -159,6 +165,8 @@ function _saveData(data, info) {
         document.getElementById("gridCheck").setAttribute("class", "form-check-input is-invalid");
         throw new Error("Os dados informados não são válidos.");
     }*/
+
+    calculaTotal()
     let newData = {};
     let selectForm = document.getElementById("selectTipFor");
     newData.selectTipFor = selectForm.options[selectForm.selectedIndex].value;
@@ -169,7 +177,7 @@ function _saveData(data, info) {
     newData.Proj = document.getElementById("Proj").value;
     newData.ConFin = document.getElementById("ConFin").value;
     newData.CenCus = document.getElementById("CenCus").value;
-    newData.VlrTot = document.getElementById("VlrTot").value;
+   // newData.VlrTot = document.getElementById("VlrTot").value;
     newData.DatPag = document.getElementById("DatPag").value;
     newData.NumNf = document.getElementById("NumNf").value;
     newData.DatPre = document.getElementById("DatPre").value;
@@ -192,10 +200,10 @@ function _saveData(data, info) {
     newData.ForPagConta = document.getElementById("ForPagConta").value;
     newData.ForPagCodBarBoleto = document.getElementById("ForPagCodBarBoleto").value;
     newData.ForPagChavePix = document.getElementById("ForPagChavePix").value;
-    newData.NomSuper = document.getElementById("NomSuper").value;
+  /*  newData.NomSuper = document.getElementById("NomSuper").value;
     newData.SupAproJusti = document.getElementById("SupAproJusti").value;
     newData.NomDir = document.getElementById("NomDir").value;
-    newData.DirAproJusti = document.getElementById("DirAproJusti").value;
+    newData.DirAproJusti = document.getElementById("DirAproJusti").value;*/
 
     console.log(newData);
     return {
@@ -217,12 +225,10 @@ function _rollback(data, info) {
 
 // Handler de eventos do checkbox
 /*function onSelect() {
-    const isChecked = document.getElementById("gridCheck").checked;
+    const isNull = document.getElementById("gridCheck").checked;
     if (isChecked) {
         document.getElementById("gridCheck").setAttribute("class", "form-check-input is-valid");
-    } else {
-        document.getElementById("gridCheck").setAttribute("class", "form-check-input is-invalid");
-    }
+    } 
 }*/
 
 // Disabling form submissions if there are invalid fields
