@@ -170,27 +170,17 @@
         </td>
       </tr>
     </table>
-    <!-- Boleto/Depósito/PIX -->
-    <!--<div class="row">
-       <div class="col-md-4">
-         <label for="ForPagBoleto" class="form-label">Boleto</label>
-         <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="ForPagBoleto">
-         </div>
-       </div>
-       <div class="col-md-4">
-         <label for="ForPagDeposito" class="form-label">Depósito</label>
-         <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="ForPagDeposito">
-         </div>
-       </div>
-       <div class="col-md-4">
-         <label for="ForPagPix" class="form-label">Pix</label>
-         <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="ForPagPix">
-         </div>
-       </div>
-     </div>-->
+    <div class="row">
+      <div class="col-md-4">
+        <label required for="selectFormPag" class="form-label">Forma de Pagamento</label>
+        <select name="select" id="selectFormPag" class="form-select" aria-label="Default select example">
+          <option selected>Selecione a Forma de Pagamento</option>
+          <option id="ForPagDep" value="ForPagDep">Depósito</option>
+          <option id="ForPagPix" value="ForPagDep">Pix</option>
+          <option id="ForPagBol" value="ForPagDep">Boleto</option>
+        </select>
+      </div>
+    </div>
     <!-- Banco -->
     <div class="row">
       <div class="col-md-12">
@@ -209,14 +199,6 @@
       <div class="col-md-6">
         <label for="ForPagConta" class="form-label">Conta</label>
         <input id="ForPagConta" type="text"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-      </div>
-    </div>
-    <!-- Codigo Barras Boleto -->
-    <div class="row">
-      <div class="col-md-12">
-        <label for="ForPagCodBarBoleto" class="form-label">Codigo Barras Boleto</label>
-        <input id="ForPagCodBarBoleto" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
     </div>
@@ -249,7 +231,7 @@
       </div>
     </div> -->
     <!-- Seq1/Descrição Parcela 1/Valor Parcela 1/Data Parcela 1 -->
-    <div class="row" id="parcela1" style="display: none;">
+    <div class="row" id="parcela1" style="display: flex;">
       <!-- <div class="col-md-3">
         <label for="SeqUm" class="form-label">Seq1</label>
         <input id="SeqUm" type="text" disabled
@@ -265,7 +247,7 @@
         <input id="VlrParUm" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 1" required>
-        <script type="text/javascript">$("#VlrParUm").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParUm").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParUm" class="form-label">Data Parcela 1</label>
@@ -274,7 +256,7 @@
       </div>
     </div>
     <!-- Código Boleto 1 -->
-    <div class="row" id="parcela1Bol" style="display: none;">
+    <div class="row" id="parcela1Bol" style="display: flex;">
       <div class="col-md-12">
         <label for="CodBolUm" class="form-label">Código Boleto 1</label>
         <input id="CodBolUm" type="text"
@@ -308,7 +290,7 @@
         <input id="VlrParDois" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 2">
-        <script type="text/javascript">$("#VlrParDois").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParDois").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParDois" class="form-label">Data Parcela 2</label>
@@ -351,7 +333,7 @@
         <input id="VlrParTres" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 3">
-        <script type="text/javascript">$("#VlrParTres").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParTres").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParTres" class="form-label">Data Parcela 3</label>
@@ -380,7 +362,7 @@
         <input id="VlrParQuatro" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 4">
-        <script type="text/javascript">$("#VlrParQuatro").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParQuatro").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParQuatro" class="form-label">Data Parcela 4</label>
@@ -388,7 +370,7 @@
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
-    <!-- Código Boleto 3 -->
+    <!-- Código Boleto 4 -->
     <div class="row" id="parcela4Bol" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolQuatro" class="form-label">Código Boleto 4</label>
@@ -409,7 +391,7 @@
         <input id="VlrParCinco" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 5">
-        <script type="text/javascript">$("#VlrParCinco").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParCinco").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParCinco" class="form-label">Data Parcela 5</label>
@@ -417,7 +399,7 @@
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
-    <!-- Código Boleto 3 -->
+    <!-- Código Boleto 5 -->
     <div class="row" id="parcela5Bol" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolCinco" class="form-label">Código Boleto 5</label>
@@ -438,7 +420,7 @@
         <input id="VlrParSeis" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 6">
-        <script type="text/javascript">$("#VlrParSeis").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParSeis").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParSeis" class="form-label">Data Parcela 6</label>
@@ -446,7 +428,7 @@
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
-    <!-- Código Boleto 3 -->
+    <!-- Código Boleto 6 -->
     <div class="row" id="parcela6Bol" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolSeis" class="form-label">Código Boleto 6</label>
@@ -467,7 +449,7 @@
         <input id="VlrParSete" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 7">
-        <script type="text/javascript">$("#VlrParSete").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParSete").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParSete" class="form-label">Data Parcela 7</label>
@@ -475,7 +457,7 @@
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
-    <!-- Código Boleto 3 -->
+    <!-- Código Boleto 7 -->
     <div class="row" id="parcela7Bol" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolSete" class="form-label">Código Boleto 7</label>
@@ -496,7 +478,7 @@
         <input id="VlrParOito" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 8">
-        <script type="text/javascript">$("#VlrParOito").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParOito").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParOito" class="form-label">Data Parcela 8</label>
@@ -504,7 +486,7 @@
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
-    <!-- Código Boleto 3 -->
+    <!-- Código Boleto 8 -->
     <div class="row" id="parcela8Bol" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolOito" class="form-label">Código Boleto 8</label>
@@ -525,7 +507,7 @@
         <input id="VlrParNove" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 9">
-        <script type="text/javascript">$("#VlrParNove").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParNove").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParNove" class="form-label">Data Parcela 9</label>
@@ -533,7 +515,7 @@
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
-    <!-- Código Boleto 3 -->
+    <!-- Código Boleto 9 -->
     <div class="row" id="parcela9Bol" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolNove" class="form-label">Código Boleto 9</label>
@@ -554,7 +536,7 @@
         <input id="VlrParDez" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 10">
-        <script type="text/javascript">$("#VlrParDez").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParDez").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParDez" class="form-label">Data Parcela 10</label>
@@ -562,7 +544,7 @@
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
-    <!-- Código Boleto 3 -->
+    <!-- Código Boleto 10 -->
     <div class="row" id="parcela10Bol" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolDez" class="form-label">Código Boleto 10</label>
@@ -583,7 +565,7 @@
         <input id="VlrParOnze" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 11">
-        <script type="text/javascript">$("#VlrParOnze").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParOnze").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParOnze" class="form-label">Data Parcela 11</label>
@@ -591,7 +573,7 @@
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
-    <!-- Código Boleto 3 -->
+    <!-- Código Boleto 11 -->
     <div class="row" id="parcela11Bol" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolOnze" class="form-label">Código Boleto 11</label>
@@ -612,7 +594,7 @@
         <input id="VlrParDoze" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 12">
-        <script type="text/javascript">$("#VlrParDoze").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#VlrParDoze").mask("#.##0,00", { reverse: true });</script>
       </div>
       <div class="col-md-3">
         <label for="DatParDoze" class="form-label">Data Parcela 12</label>
@@ -620,7 +602,7 @@
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
-    <!-- Código Boleto 3 -->
+    <!-- Código Boleto 12 -->
     <div class="row" id="parcela12Bol" style="display: none;">
       <div class="col-md-12">
         <label for="CodBolDoze" class="form-label">Código Boleto 12</label>
@@ -636,15 +618,17 @@
           onclick="calculaTotal()" />
       </div>
     </div>
-  <!-- Total a Pagar -->
+
+    <!-- Total a Pagar -->
     <div class="row">
       <div class="col-md-12">
         <label for="TotalPagarPar" class="form-label">Total a Pagar:</label>
-        <input id="TotalPagarPar" type="text"
+        <input disabled id="TotalPagarPar" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-        <script type="text/javascript">$("#TotalPagarPar").mask("#.##0.00", { reverse: true });</script>
+        <script type="text/javascript">$("#TotalPagarPar").mask("#.##0,00", { reverse: true });</script>
       </div>
     </div>
+
     <!---------------------------------------------------------------------------------------------------->
     <!-- <h5>APROVAÇÃO SUPERVISOR</h5>-->
 
