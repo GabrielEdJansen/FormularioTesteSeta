@@ -192,7 +192,7 @@ function calculaTotal() {
     }
 
 
-    VlrTot = VlrTot.toFixed(2)
+    //VlrTot = VlrTot.toFixed(2)
 
     document.getElementById("TotalPagarPar").value = VlrTot
 
