@@ -126,6 +126,8 @@ function calculaTotal() {
 
     var VlrTot = 0;
 
+    var VlrTotConvert = "";
+    
     var VlrTot1 = document.getElementById("VlrParUm").value
     var VlrTot2 = document.getElementById("VlrParDois").value
     var VlrTot3 = document.getElementById("VlrParTres").value
@@ -192,9 +194,13 @@ function calculaTotal() {
     }
 
 
-    //VlrTot = VlrTot.toFixed(2)
+    VlrTot = VlrTot.toFixed(2)
 
-    document.getElementById("TotalPagarPar").value = VlrTot
+    VlrTotConvert = VlrTot.toString()
+
+    VlrTotConvert = VlrTotConvert.replace(".", ",");
+
+    document.getElementById("TotalPagarPar").value = VlrTotConvert
 
 }
 
