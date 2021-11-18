@@ -125,9 +125,8 @@ function inserirLinhaTabela() {
 function calculaTotal() {
 
     var VlrTot = 0;
-
     var VlrTotConvert = "";
-    
+
     var VlrTot1 = document.getElementById("VlrParUm").value
     var VlrTot2 = document.getElementById("VlrParDois").value
     var VlrTot3 = document.getElementById("VlrParTres").value
@@ -321,7 +320,7 @@ function _init(data, info) {
 
 
 
-            document.getElementById("selectTipFor").setAttribute("value", selectTipFor);
+            document.getElementById("selectTipFor").value = selectTipFor;
             document.getElementById("DatSol").setAttribute("value", DatSol);
             document.getElementById("Fornec").setAttribute("value", Fornec);
             document.getElementById("Cnpj").setAttribute("value", Cnpj);
