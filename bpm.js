@@ -1,3 +1,183 @@
+function ExibirFormaPagamento() {
+
+    if (document.getElementById("selectFormPag").value == 'Pix') {
+        let eVal2 = document.getElementById('PagPix');
+
+        eVal2.style.display = 'flex';
+
+        let eVal = document.getElementById('PagBanco');
+
+        eVal.style.display = 'none';
+
+        let eVal1 = document.getElementById('PagBancoAge');
+
+        eVal1.style.display = 'none';
+
+        let eBol1 = document.getElementById('parcela1Bol');
+        eBol1.style.display = 'none';
+        let eBol2 = document.getElementById('parcela2Bol');
+        eBol2.style.display = 'none';
+        let eBol3 = document.getElementById('parcela3Bol');
+        eBol3.style.display = 'none';
+        let eBol4 = document.getElementById('parcela4Bol');
+        eBol4.style.display = 'none';
+        let eBol5 = document.getElementById('parcela5Bol');
+        eBol5.style.display = 'none';
+        let eBol6 = document.getElementById('parcela6Bol');
+        eBol6.style.display = 'none';
+        let eBol7 = document.getElementById('parcela7Bol');
+        eBol7.style.display = 'none';
+        let eBol8 = document.getElementById('parcela8Bol');
+        eBol8.style.display = 'none';
+        let eBol9 = document.getElementById('parcela9Bol');
+        eBol9.style.display = 'none';
+        let eBol10 = document.getElementById('parcela10Bol');
+        eBol10.style.display = 'none';
+        let eBol11 = document.getElementById('parcela11Bol');
+        eBol11.style.display = 'none';
+        let eBol12 = document.getElementById('parcela12Bol');
+        eBol12.style.display = 'none';
+
+    }
+    if (document.getElementById("selectFormPag").value == 'Depósito') {
+        let eVal = document.getElementById('PagBanco');
+
+        eVal.style.display = 'flex';
+
+        let eVal1 = document.getElementById('PagBancoAge');
+
+        eVal1.style.display = 'flex';
+
+        let eVal2 = document.getElementById('PagPix');
+
+        eVal2.style.display = 'none';
+
+        let eBol1 = document.getElementById('parcela1Bol');
+        eBol1.style.display = 'none';
+        let eBol2 = document.getElementById('parcela2Bol');
+        eBol2.style.display = 'none';
+        let eBol3 = document.getElementById('parcela3Bol');
+        eBol3.style.display = 'none';
+        let eBol4 = document.getElementById('parcela4Bol');
+        eBol4.style.display = 'none';
+        let eBol5 = document.getElementById('parcela5Bol');
+        eBol5.style.display = 'none';
+        let eBol6 = document.getElementById('parcela6Bol');
+        eBol6.style.display = 'none';
+        let eBol7 = document.getElementById('parcela7Bol');
+        eBol7.style.display = 'none';
+        let eBol8 = document.getElementById('parcela8Bol');
+        eBol8.style.display = 'none';
+        let eBol9 = document.getElementById('parcela9Bol');
+        eBol9.style.display = 'none';
+        let eBol10 = document.getElementById('parcela10Bol');
+        eBol10.style.display = 'none';
+        let eBol11 = document.getElementById('parcela11Bol');
+        eBol11.style.display = 'none';
+        let eBol12 = document.getElementById('parcela12Bol');
+        eBol12.style.display = 'none';
+    }
+
+    if (document.getElementById("selectFormPag").value == 'Boleto') {
+        let eVal2 = document.getElementById('PagPix');
+
+        eVal2.style.display = 'none';
+
+        let eVal = document.getElementById('PagBanco');
+
+        eVal.style.display = 'none';
+
+        let eVal1 = document.getElementById('PagBancoAge');
+
+        eVal1.style.display = 'none';
+
+
+
+        let eBol = document.getElementById('parcela1Bol');
+
+        eBol.style.display = 'flex';
+
+        if (document.getElementById("CodBolUm").value != '') {
+
+            let eBol2 = document.getElementById('parcela2Bol');
+
+            eBol2.style.display = 'flex';
+        }
+
+        if (document.getElementById("CodBolDois").value != 0) {
+
+            let eBol3 = document.getElementById('parcela3Bol') ;
+
+            eBol3.style.display = 'flex';
+        }
+
+        if (document.getElementById("CodBolTres").value != 0) {
+
+            let eBol4 = document.getElementById('parcela4Bol');
+
+            eBol4.style.display = 'flex';
+        }
+
+        if (document.getElementById("CodBolQuatro").value != 0) {
+
+            let eBol5 = document.getElementById('parcela5Bol');
+
+            eBol5.style.display = 'flex';
+        }
+
+        if (document.getElementById("CodBolCinco").value != 0) {
+
+            let eBol6 = document.getElementById('parcela6Bol');
+
+            eBol6.style.display = 'flex';
+        }
+
+        if (document.getElementById("CodBolSeis").value != 0) {
+
+            let eBol7 = document.getElementById('parcela7Bol');
+
+            eBol7.style.display = 'flex';
+        }
+
+        if (document.getElementById("CodBolSete").value != 0) {
+
+            let eBol8 = document.getElementById('parcela8Bol');
+
+            eBol8.style.display = 'flex';
+        }
+
+        if (document.getElementById("CodBolOito").value != 0) {
+
+            let eBol9 = document.getElementById('parcela9Bol');
+
+            eBol9.style.display = 'flex';
+        }
+
+        if (document.getElementById("CodBolNove").value != 0) {
+
+            let eBol10 = document.getElementById('parcela10Bol');
+
+            eBol10.style.display = 'flex';
+        }
+
+        if (document.getElementById("CodBolDez").value != 0) {
+
+            let eBol11 = document.getElementById('parcela11Bol');
+
+            eBol11.style.display = 'flex';
+        }
+
+        if (document.getElementById("CodBolOnze").value != 0) {
+
+            let eBol12 = document.getElementById('parcela12Bol');
+
+            eBol12.style.display = 'flex';
+        }
+    }
+}
+
+
+
 function inserirLinhaTabela() {
 
     if (document.getElementById("VlrParUm").value == 0) {
@@ -5,9 +185,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela1Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela1Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParUm").value != 0) {
@@ -15,9 +197,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela2Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela2Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParDois").value != 0) {
@@ -25,9 +209,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela3Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela3Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParTres").value != 0) {
@@ -35,9 +221,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela4Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela4Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParQuatro").value != 0) {
@@ -45,9 +233,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela5Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela5Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParCinco").value != 0) {
@@ -55,9 +245,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela6Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela6Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParSeis").value != 0) {
@@ -65,9 +257,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela7Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela7Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParSete").value != 0) {
@@ -75,9 +269,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela8Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela8Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParOito").value != 0) {
@@ -85,9 +281,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela9Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela9Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParNove").value != 0) {
@@ -95,9 +293,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela10Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela10Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParDez").value != 0) {
@@ -105,9 +305,11 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela11Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela11Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
     if (document.getElementById("VlrParOnze").value != 0) {
@@ -115,17 +317,81 @@ function inserirLinhaTabela() {
 
         eVal.style.display = 'flex';
 
-        let eBol = document.getElementById('parcela12Bol');
+        if (document.getElementById("selectFormPag").value == 'Boleto') {
+            let eBol = document.getElementById('parcela12Bol');
 
-        eBol.style.display = 'flex';
+            eBol.style.display = 'flex';
+        }
         calculaTotal()
     }
 }
 
+String.prototype.reverse = function () {
+    return this.split('').reverse().join('');
+};
+function mascaraMoeda(campo, evento) {
+    var tecla = (!evento) ? window.event.keyCode : evento.which;
+    var valor = campo.value.replace(/[^\d]+/gi, '').reverse();
+    var resultado = "";
+    var mascara = "##.###.###,##".reverse();
+    for (var x = 0, y = 0; x < mascara.length && y < valor.length;) {
+        if (mascara.charAt(x) != '#') {
+            resultado += mascara.charAt(x);
+            x++;
+        } else {
+            resultado += valor.charAt(y);
+            y++;
+            x++;
+        }
+    }
+    campo.value = resultado.reverse();
+    calculaTotal()
+}
+
+function retornaInteiro(Vlr) {
+    var vlrTot = 0;
+    auxSomaInt = '';
+    auxSomaDec = '';
+
+    var TamVlr = Vlr.length;
+
+    for (var i = 0; i < TamVlr; i++) {
+        var SomaInt = Vlr.substring(i, i + 1)
+        if (SomaInt == ',') {
+            break
+        } else {
+
+            auxSomaInt = auxSomaInt + SomaInt
+        }
+    }
+
+    auxSomaInt = auxSomaInt.replace(".", "");
+
+    parseFloat(auxSomaInt)
+
+    for (var i = 0; i < TamVlr; i++) {
+        var SomaDec = Vlr.substring(i, i + 1)
+        if (SomaDec == ',') {
+            var SomaDec = Vlr.substring(i + 1, i + 2)
+            auxSomaDec = auxSomaDec + SomaDec
+            var SomaDec = Vlr.substring(i + 2, i + 3)
+            auxSomaDec = auxSomaDec + SomaDec
+            break
+        }
+    }
+    if (auxSomaDec != '') {
+        auxSomaDec = "." + auxSomaDec;
+    }
+    parseFloat(auxSomaDec)
+    return vlrTot = auxSomaInt + auxSomaDec
+
+}
+
 function calculaTotal() {
 
-    var VlrTot = 0;
+    var VlrTotSum = 0;
     var VlrTotConvert = "";
+
 
     var VlrTot1 = document.getElementById("VlrParUm").value
     var VlrTot2 = document.getElementById("VlrParDois").value
@@ -140,66 +406,49 @@ function calculaTotal() {
     var VlrTot11 = document.getElementById("VlrParOnze").value
     var VlrTot12 = document.getElementById("VlrParDoze").value
 
-    VlrTot1 = VlrTot1.replace(",", ".");
-    VlrTot2 = VlrTot2.replace(",", ".");
-    VlrTot3 = VlrTot3.replace(",", ".");
-    VlrTot4 = VlrTot4.replace(",", ".");
-    VlrTot5 = VlrTot5.replace(",", ".");
-    VlrTot6 = VlrTot6.replace(",", ".");
-    VlrTot7 = VlrTot7.replace(",", ".");
-    VlrTot8 = VlrTot8.replace(",", ".");
-    VlrTot9 = VlrTot9.replace(",", ".");
-    VlrTot10 = VlrTot10.replace(",", ".");
-    VlrTot11 = VlrTot11.replace(",", ".");
-    VlrTot12 = VlrTot12.replace(",", ".");
-
-
-
     if (VlrTot1 != 0) {
-        VlrTot = parseFloat(VlrTot1)
+        VlrTotSum = retornaInteiro(VlrTot1)
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot2))
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot3))
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0) && (VlrTot4 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot4))
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0) && (VlrTot4 != 0) && (VlrTot5 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot5))
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0) && (VlrTot4 != 0) && (VlrTot5 != 0) && (VlrTot6 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5) + parseFloat(VlrTot6)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot6))
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0) && (VlrTot4 != 0) && (VlrTot5 != 0) && (VlrTot6 != 0) && (VlrTot7 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5) + parseFloat(VlrTot6) + parseFloat(VlrTot7)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot7))
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0) && (VlrTot4 != 0) && (VlrTot5 != 0) && (VlrTot6 != 0) && (VlrTot7 != 0) && (VlrTot8 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5) + parseFloat(VlrTot6) + parseFloat(VlrTot7) + parseFloat(VlrTot8)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot8))
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0) && (VlrTot4 != 0) && (VlrTot5 != 0) && (VlrTot6 != 0) && (VlrTot7 != 0) && (VlrTot8 != 0) && (VlrTot9 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5) + parseFloat(VlrTot6) + parseFloat(VlrTot7) + parseFloat(VlrTot8) + parseFloat(VlrTot9)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot9))
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0) && (VlrTot4 != 0) && (VlrTot5 != 0) && (VlrTot6 != 0) && (VlrTot7 != 0) && (VlrTot8 != 0) && (VlrTot9 != 0) && (VlrTot10 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5) + parseFloat(VlrTot6) + parseFloat(VlrTot7) + parseFloat(VlrTot8) + parseFloat(VlrTot9) + parseFloat(VlrTot10)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot10))
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0) && (VlrTot4 != 0) && (VlrTot5 != 0) && (VlrTot6 != 0) && (VlrTot7 != 0) && (VlrTot8 != 0) && (VlrTot9 != 0) && (VlrTot10 != 0) && (VlrTot11 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5) + parseFloat(VlrTot6) + parseFloat(VlrTot7) + parseFloat(VlrTot8) + parseFloat(VlrTot9) + parseFloat(VlrTot10) + parseFloat(VlrTot11)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot11))
     }
     if ((VlrTot1 != 0) && (VlrTot2 != 0) && (VlrTot3 != 0) && (VlrTot4 != 0) && (VlrTot5 != 0) && (VlrTot6 != 0) && (VlrTot7 != 0) && (VlrTot8 != 0) && (VlrTot9 != 0) && (VlrTot10 != 0) && (VlrTot11 != 0) && (VlrTot12 != 0)) {
-        VlrTot = parseFloat(VlrTot1) + parseFloat(VlrTot2) + parseFloat(VlrTot3) + parseFloat(VlrTot4) + parseFloat(VlrTot5) + parseFloat(VlrTot6) + parseFloat(VlrTot7) + parseFloat(VlrTot8) + parseFloat(VlrTot9) + parseFloat(VlrTot10) + parseFloat(VlrTot11) + parseFloat(VlrTot12)
+        VlrTotSum = parseFloat(VlrTotSum) + parseFloat(retornaInteiro(VlrTot12))
     }
 
 
-    VlrTot = VlrTot.toFixed(2)
+    VlrTotSum = VlrTotSum
 
-    VlrTotConvert = VlrTot.toString()
+    var VlrTotSumConvert = parseFloat(VlrTotSum).toLocaleString('pt-br', { minimumFractionDigits: 2 });
 
-    VlrTotConvert = VlrTotConvert.replace(".", ",");
-
-    document.getElementById("TotalPagarPar").value = VlrTotConvert
+    document.getElementById("TotalPagarPar").value = VlrTotSumConvert
 
 }
 
