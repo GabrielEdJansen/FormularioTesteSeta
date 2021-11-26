@@ -490,6 +490,7 @@ function _init(data, info) {
 
             console.log("Carregando Dados", map);
             const selectTipFor = map.get("selectTipFor");
+            const selectFormPag = map.get("selectFormPag");
             const DatSol = map.get("DatSol");
             const Fornec = map.get("Fornec");
             const Cnpj = map.get("Cnpj");
@@ -570,6 +571,7 @@ function _init(data, info) {
 
 
             document.getElementById("selectTipFor").value = selectTipFor;
+            document.getElementById("selectFormPag").value = selectFormPag;
             document.getElementById("DatSol").setAttribute("value", DatSol);
             document.getElementById("Fornec").setAttribute("value", Fornec);
             document.getElementById("Cnpj").setAttribute("value", Cnpj);
@@ -662,6 +664,9 @@ function _saveData(data, info) {
     let newData = {};
     let selectForm = document.getElementById("selectTipFor");
     newData.selectTipFor = selectForm.options[selectForm.selectedIndex].value;
+
+    let selectFormPagamento = document.getElementById("selectFormPag");
+    newData.selectFormPag = selectFormPagamento.options[selectFormPagamento.selectedIndex].value;
 
     newData.DatSol = document.getElementById("DatSol").value;
     newData.Fornec = document.getElementById("Fornec").value;
