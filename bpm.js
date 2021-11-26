@@ -1154,6 +1154,29 @@ function isFormValid() {
         }
     }
     //--------------------------------------------------DESCRIÇÃO DE PAGAMENTO / PARCELAMENTO--------------------------------------------------  
+    if (document.getElementById("VlrParUm").value == 0) {
+        //Valor Parcela 1
+        document.getElementById("VlrParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        //Descrição Parcela 1
+        var isNullDescParUm = document.getElementById("DescParUm").value;
+        if (isNullDescParUm == '') {
+            document.getElementById("DescParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 1
+        var isNullDatParUm = document.getElementById("DatParUm").value;
+        if (isNullDatParUm == '') {
+            document.getElementById("DatParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+
+
     if (document.getElementById("VlrParUm").value != 0) {
         //Valor Parcela 1
         document.getElementById("VlrParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
