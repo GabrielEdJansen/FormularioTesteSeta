@@ -1,6 +1,13 @@
 function ExibeBoleto() {
     if (document.getElementById("selectFormPag").value == 'Boleto') {
 
+        document.getElementById("ForPagChavePix").value = ''
+
+        document.getElementById("ForPagBanco").value = ''
+        document.getElementById("ForPagAgencia").value = ''
+        document.getElementById("ForPagConta").value = ''  
+
+
         if (document.getElementById("VlrParUm").value != 0) {
 
             let eBol1 = document.getElementById('parcela1Bol');
@@ -91,6 +98,24 @@ function ExibeBoleto() {
 function ExibirFormaPagamento() {
 
     if (document.getElementById("selectFormPag").value == 'Pix') {
+
+        document.getElementById("CodBolUm").value = ''
+        document.getElementById("CodBolDois").value = ''
+        document.getElementById("CodBolTres").value = ''
+        document.getElementById("CodBolQuatro").value = ''
+        document.getElementById("CodBolCinco").value = ''
+        document.getElementById("CodBolSeis").value = ''
+        document.getElementById("CodBolSete").value = ''
+        document.getElementById("CodBolOito").value = ''
+        document.getElementById("CodBolNove").value = ''
+        document.getElementById("CodBolDez").value = ''
+        document.getElementById("CodBolOnze").value = ''
+        document.getElementById("CodBolDoze").value = ''
+
+        document.getElementById("ForPagBanco").value = ''
+        document.getElementById("ForPagAgencia").value = ''
+        document.getElementById("ForPagConta").value = ''        
+
         let eVal2 = document.getElementById('PagPix');
 
         eVal2.style.display = 'flex';
@@ -130,6 +155,23 @@ function ExibirFormaPagamento() {
 
     }
     if (document.getElementById("selectFormPag").value == 'Depósito') {
+        
+        document.getElementById("CodBolUm").value = ''
+        document.getElementById("CodBolDois").value = ''
+        document.getElementById("CodBolTres").value = ''
+        document.getElementById("CodBolQuatro").value = ''
+        document.getElementById("CodBolCinco").value = ''
+        document.getElementById("CodBolSeis").value = ''
+        document.getElementById("CodBolSete").value = ''
+        document.getElementById("CodBolOito").value = ''
+        document.getElementById("CodBolNove").value = ''
+        document.getElementById("CodBolDez").value = ''
+        document.getElementById("CodBolOnze").value = ''
+        document.getElementById("CodBolDoze").value = ''
+
+        document.getElementById("ForPagChavePix").value = ''
+
+        
         let eVal = document.getElementById('PagBanco');
 
         eVal.style.display = 'flex';
