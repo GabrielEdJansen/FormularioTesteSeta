@@ -762,15 +762,15 @@ function isFormValid() {
     var isNullSelectTipFor = document.getElementById("selectTipFor").value;
     if (isNullSelectTipFor == '') {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-invalid");
-    } else {
+    } if(isNullSelectTipFor =! '') {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-valid");
     }
 
     //Data Solicitação
     var isNullDatSol = document.getElementById("DatSol ").value;
-    if (isNullDatSol== '') {
+    if (isNullDatSol == '') {
         document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
-    } else {
+    } (isNullDatSol != '') {
         document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
     }
 
@@ -778,14 +778,14 @@ function isFormValid() {
     var isNullFornec = document.getElementById("Fornec").value;
     if (isNullFornec == '') {
         document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } else {
+    } if(isNullFornec != '') {
         document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
     }
     //CNPJ
     var isNullCnpj = document.getElementById("Cnpj").value;
     if (isNullCnpj == '') {
         document.getElementById("Cnpj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } else {
+    } if (isNullCnpj != '') {
         document.getElementById("Cnpj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
     }
 
@@ -793,7 +793,7 @@ function isFormValid() {
     var isNullProj= document.getElementById("Proj").value;
     if (isNullProj == '') {
         document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } else {
+    } if(isNullProj != '') {
         document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
     }
 
@@ -801,7 +801,7 @@ function isFormValid() {
     var isNullConFin = document.getElementById("ConFin").value;
     if (isNullConFin == '') {
         document.getElementById("ConFin").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } else {
+    } if (isNullConFin != '') {
         document.getElementById("ConFin").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
     }
 
@@ -809,7 +809,7 @@ function isFormValid() {
     var isNullCenCus = document.getElementById("CenCus").value;
     if (isNullCenCus == '') {
         document.getElementById("CenCus").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } else {
+    } if (isNullCenCus != '') {
         document.getElementById("CenCus").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
     }
 
