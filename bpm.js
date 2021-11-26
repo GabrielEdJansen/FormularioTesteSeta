@@ -656,7 +656,7 @@ function _init(data, info) {
 // Essa função é chamada quando o usuário clicar no botão 'Enviar'
 function _saveData(data, info) {
     if (!isFormValid()) {
-        throw new Error("Os dados informados não são válidos.");
+        throw new Error("Ainda falta ser preenchidos alguns campos");
     }
 
     calculaTotal()
@@ -759,6 +759,8 @@ function _rollback(data, info) {
 
 
 function isFormValid() {
+    var retornaResultado = 0
+
     //Tipo de Formulario
     var isNullSelectTipFor = document.getElementById("selectTipFor").value;
     if ((isNullSelectTipFor == '') || (isNullSelectTipFor == 'Selecione o tipo do formulário')) {
@@ -766,6 +768,7 @@ function isFormValid() {
     } 
     if ((isNullSelectTipFor != '') && (isNullSelectTipFor != 'Selecione o tipo do formulário')) {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-valid");
+        retornaResultado++
     }
 
     //Data Solicitação
@@ -774,6 +777,7 @@ function isFormValid() {
         document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
     } if (isNullDatSol != '') {
         document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+        retornaResultado++
     }
 
     //Fornecedor
@@ -782,6 +786,7 @@ function isFormValid() {
         document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
     } if (isNullFornec != '') {
         document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
     }
     //CNPJ
     var isNullCnpj = document.getElementById("Cnpj").value;
@@ -789,6 +794,7 @@ function isFormValid() {
         document.getElementById("Cnpj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
     } if (isNullCnpj != '') {
         document.getElementById("Cnpj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
     }
 
     //Projeto
@@ -797,6 +803,7 @@ function isFormValid() {
         document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
     } if (isNullProj != '') {
         document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
     }
 
     //Conta Financeira
@@ -805,6 +812,7 @@ function isFormValid() {
         document.getElementById("ConFin").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
     } if (isNullConFin != '') {
         document.getElementById("ConFin").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
     }
 
     //Centro de Custo
@@ -813,8 +821,11 @@ function isFormValid() {
         document.getElementById("CenCus").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
     } if (isNullCenCus != '') {
         document.getElementById("CenCus").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
     }
-
+    if(retornaResultado == 7){
+        return true
+    }
 }
 
 /*function onSelect() {
