@@ -758,10 +758,10 @@ function _rollback(data, info) {
       })*/
 }
 
-/*function isFormValid() {
-    const isChecked = document.getElementById("gridCheck").checked;
-    return isChecked;
-}*/
+
+function isFormValid() {
+    alert('Tudo ok')
+}
 
 // Handler de eventos do checkbox
 /*function onSelect() {
