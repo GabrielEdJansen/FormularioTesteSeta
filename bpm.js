@@ -655,7 +655,7 @@ function _init(data, info) {
 
 // Essa função é chamada quando o usuário clicar no botão 'Enviar'
 function _saveData(data, info) {
-     if (!isFormValid()) {
+    if (!isFormValid()) {
         throw new Error("Os dados informados não são válidos.");
     }
 
@@ -758,12 +758,61 @@ function _rollback(data, info) {
 }
 
 function isFormValid() {
+    //Tipo de Formulario
+    var isNullSelectTipFor = document.getElementById("selectTipFor").value;
+    if (isNullSelectTipFor == '') {
+        document.getElementById("selectTipFor").setAttribute("class", "form-select is-invalid");
+    } else {
+        document.getElementById("selectTipFor").setAttribute("class", "form-select is-valid");
+    }
+
+    //Data Solicitação
+    var isNullDatSol = document.getElementById("DatSol ").value;
+    if (isNullDatSol== '') {
+        document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+    } else {
+        document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+    }
+
+    //Fornecedor
     var isNullFornec = document.getElementById("Fornec").value;
     if (isNullFornec == '') {
         document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
     } else {
         document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
     }
+    //CNPJ
+    var isNullCnpj = document.getElementById("Cnpj").value;
+    if (isNullCnpj == '') {
+        document.getElementById("Cnpj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+    } else {
+        document.getElementById("Cnpj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+    }
+
+    //Projeto
+    var isNullProj= document.getElementById("Proj").value;
+    if (isNullProj == '') {
+        document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+    } else {
+        document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+    }
+
+    //Conta Financeira
+    var isNullConFin = document.getElementById("ConFin").value;
+    if (isNullConFin == '') {
+        document.getElementById("ConFin").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+    } else {
+        document.getElementById("ConFin").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+    }
+
+    //Centro de Custo
+    var isNullCenCus = document.getElementById("CenCus").value;
+    if (isNullCenCus == '') {
+        document.getElementById("CenCus").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+    } else {
+        document.getElementById("CenCus").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+    }
+
 }
 
 /*function onSelect() {
