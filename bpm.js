@@ -1518,7 +1518,8 @@ function isFormValid() {
 
     }
 
-
+    console.log(TotalCampos)
+    console.log(retornaResultado)
     if (TotalCampos == retornaResultado) {
         return true
     }
