@@ -922,7 +922,6 @@ function isFormValid() {
         document.getElementById("DatPag").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
     } else {
         document.getElementById("DatPag").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
-        retornaResultado++
     }
 
     //Número da NF
@@ -1180,6 +1179,7 @@ function isFormValid() {
     if (document.getElementById("VlrParUm").value != 0) {
         //Valor Parcela 1
         document.getElementById("VlrParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 1
         var isNullDescParUm = document.getElementById("DescParUm").value;
         if (isNullDescParUm == '') {
@@ -1202,6 +1202,7 @@ function isFormValid() {
     if (document.getElementById("VlrParDois").value != 0) {
         //Valor Parcela 2
         document.getElementById("VlrParDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 2
         var isNullDescParDois = document.getElementById("DescParDois").value;
         if (isNullDescParDois == '') {
@@ -1223,6 +1224,7 @@ function isFormValid() {
     if (document.getElementById("VlrParTres").value != 0) {
         //Valor Parcela 3
         document.getElementById("VlrParTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 3
         var isNullDescParTres = document.getElementById("DescParTres").value;
         if (isNullDescParTres == '') {
@@ -1244,6 +1246,7 @@ function isFormValid() {
     if (document.getElementById("VlrParQuatro").value != 0) {
         //Valor Parcela 4
         document.getElementById("VlrParQuatro").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 4
         var isNullDescParQuatro = document.getElementById("DescParQuatro").value;
         if (isNullDescParQuatro == '') {
@@ -1265,6 +1268,7 @@ function isFormValid() {
     if (document.getElementById("VlrParCinco").value != 0) {
         //Valor Parcela 5
         document.getElementById("VlrParCinco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 5
         var isNullDescParCinco = document.getElementById("DescParCinco").value;
         if (isNullDescParCinco == '') {
@@ -1286,6 +1290,7 @@ function isFormValid() {
     if (document.getElementById("VlrParSeis").value != 0) {
         //Valor Parcela 6
         document.getElementById("VlrParSeis").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 6
         var isNullDescParSeis = document.getElementById("DescParSeis").value;
         if (isNullDescParSeis == '') {
@@ -1307,6 +1312,7 @@ function isFormValid() {
     if (document.getElementById("VlrParSete").value != 0) {
         //Valor Parcela 7
         document.getElementById("VlrParSete").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 7
         var isNullDescParSete = document.getElementById("DescParSete").value;
         if (isNullDescParSete == '') {
@@ -1328,6 +1334,7 @@ function isFormValid() {
     if (document.getElementById("VlrParOito").value != 0) {
         //Valor Parcela 8
         document.getElementById("VlrParOito").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 8
         var isNullDescParOito = document.getElementById("DescParOito").value;
         if (isNullDescParOito == '') {
@@ -1349,6 +1356,7 @@ function isFormValid() {
     if (document.getElementById("VlrParNove").value != 0) {
         //Valor Parcela 9
         document.getElementById("VlrParNove").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 9
         var isNullDescParNove = document.getElementById("DescParNove").value;
         if (isNullDescParNove == '') {
@@ -1370,6 +1378,7 @@ function isFormValid() {
     if (document.getElementById("VlrParDez").value != 0) {
         //Valor Parcela 10
         document.getElementById("VlrParDez").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 10
         var isNullDescParDez = document.getElementById("DescParDez").value;
         if (isNullDescParDez == '') {
@@ -1391,6 +1400,7 @@ function isFormValid() {
     if (document.getElementById("VlrParOnze").value != 0) {
         //Valor Parcela 11
         document.getElementById("VlrParOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 11
         var isNullDescParOnze = document.getElementById("DescParOnze").value;
         if (isNullDescParOnze == '') {
@@ -1411,6 +1421,7 @@ function isFormValid() {
     if (document.getElementById("VlrParDoze").value != 0) {
         //Valor Parcela 12
         document.getElementById("VlrParDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
         //Descrição Parcela 12
         var isNullDescParDoze = document.getElementById("DescParDoze").value;
         if (isNullDescParDoze == '') {
@@ -1433,9 +1444,9 @@ function isFormValid() {
     var TotalCampos = 0
     if ((document.getElementById("selectFormPag").value == 'Pix') || (document.getElementById("selectFormPag").value == 'Depósito')) {
         if (document.getElementById("selectFormPag").value == 'Depósito') {
-            TotalCampos = 15
+            TotalCampos = 14
         } else {
-            TotalCampos = 13
+            TotalCampos = 12
         }
 
         TotalCampos = TotalCampos + 3
@@ -1478,7 +1489,7 @@ function isFormValid() {
 
     if (document.getElementById("selectFormPag").value == 'Boleto') {
 
-        TotalCampos = 12
+        TotalCampos = 11
 
         TotalCampos = TotalCampos + 4
 
@@ -1518,8 +1529,6 @@ function isFormValid() {
 
     }
 
-    console.log(TotalCampos)
-    console.log(retornaResultado)
     if (TotalCampos == retornaResultado) {
         return true
     }
