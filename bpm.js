@@ -760,9 +760,10 @@ function _rollback(data, info) {
 function isFormValid() {
     //Tipo de Formulario
     var isNullSelectTipFor = document.getElementById("selectTipFor").value;
-    if (isNullSelectTipFor == '') {
+    if ((isNullSelectTipFor == '') || (isNullSelectTipFor == 'Selecione o tipo do formulário')) {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-invalid");
-    } if (isNullSelectTipFor =! '') {
+    } 
+    if (isNullSelectTipFor != '') {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-valid");
     }
 
@@ -790,7 +791,7 @@ function isFormValid() {
     }
 
     //Projeto
-    var isNullProj= document.getElementById("Proj").value;
+    var isNullProj = document.getElementById("Proj").value;
     if (isNullProj == '') {
         document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
     } if (isNullProj != '') {
