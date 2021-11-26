@@ -655,11 +655,9 @@ function _init(data, info) {
 
 // Essa função é chamada quando o usuário clicar no botão 'Enviar'
 function _saveData(data, info) {
-    /*if (!isFormValid()) {
-        document.getElementById("gridCheck").setAttribute("class", "form-check-input is-invalid");
+     if (!isFormValid()) {
         throw new Error("Os dados informados não são válidos.");
-    }*/
-    isFormValid()
+    }
 
     calculaTotal()
     let newData = {};
