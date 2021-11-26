@@ -20,11 +20,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
 
 
-  <script type="text/javascript" src="jquery.maskMoney.js" ></script>
+  <script type="text/javascript" src="jquery.maskMoney.js"></script>
   <script type="text/javascript">
-      $(document).ready(function(){
-            $("input.dinheiro").maskMoney({showSymbol:true, symbol:"R$", decimal:",", thousands:"."});
-      });
+    $(document).ready(function () {
+      $("input.dinheiro").maskMoney({ showSymbol: true, symbol: "R$", decimal: ",", thousands: "." });
+    });
   </script>
 
   <script type="text/javascript" src="https://cdn.senior.com.br/bpm/1.10.0/workflow-cockpit.min.js"></script>
@@ -71,9 +71,13 @@
     <div class="row">
       <div class="col-md-6">
         <label for="Fornec" class="form-label">Fornecedor</label>
-        <input required id="Fornec" type="text"
+        <input required id="Fornec" type="text" required
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">
+          *Campo Obrigatório
+        </div>
       </div>
+
       <div class="col-md-6">
         <label for="Cnpj" class="form-label">CNPJ</label>
         <input id="Cnpj" name="Cnpj" required
@@ -182,7 +186,8 @@
     <div class="row">
       <div class="col-md-4">
         <label required for="selectFormPag" class="form-label">Forma de Pagamento</label>
-        <select name="select" id="selectFormPag" class="form-select" aria-label="Default select example" onchange="javascript:ExibirFormaPagamento();">
+        <select name="select" id="selectFormPag" class="form-select" aria-label="Default select example"
+          onchange="javascript:ExibirFormaPagamento();">
           <option selected>Selecione a Forma de Pagamento</option>
           <option id="ForPagDep" value="Depósito">Depósito</option>
           <option id="ForPagPix" value="Pix">Pix</option>
@@ -255,7 +260,7 @@
         <label for="VlrParUm" class="form-label">Valor Parcela 1</label>
         <input id="VlrParUm" type="text" value="" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
-          placeholder="Digite o valor da parcela 1" required> 
+          placeholder="Digite o valor da parcela 1" required>
       </div>
       <div class="col-md-3">
         <label for="DatParUm" class="form-label">Data Parcela 1</label>
@@ -365,13 +370,13 @@
       </div>
       <div class="col-md-3">
         <label for="VlrParQuatro" class="form-label">Valor Parcela 4</label>
-        <input id="VlrParQuatro" type="text"  onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParQuatro" type="text" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 4">
       </div>
       <div class="col-md-3">
         <label for="DatParQuatro" class="form-label">Data Parcela 4</label>
-        <input id="DatParQuatro" type="date" 
+        <input id="DatParQuatro" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
@@ -505,7 +510,7 @@
       </div>
       <div class="col-md-3">
         <label for="VlrParNove" class="form-label">Valor Parcela 9</label>
-        <input id="VlrParNove" type="text"  onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParNove" type="text" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 9">
       </div>
@@ -618,7 +623,7 @@
     <div class="row">
       <div class="col-md-12">
         <label for="TotalPagarPar" class="form-label">Total a Pagar:</label>
-        <input disabled id="TotalPagarPar"  onKeyUp="mascaraMoeda(this, event)"
+        <input disabled id="TotalPagarPar" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
       </div>
     </div>
@@ -726,6 +731,13 @@
         </div>
       </div>
     </div>-->
+
+    <div class="row">
+      <div class="col-md-6">
+        <input class="btn btn-outline-success" type="button" value="Validador" />
+
+      </div>
+    </div>
 
   </form>
 </body>
