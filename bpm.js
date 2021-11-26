@@ -659,7 +659,7 @@ function _saveData(data, info) {
         document.getElementById("gridCheck").setAttribute("class", "form-check-input is-invalid");
         throw new Error("Os dados informados não são válidos.");
     }*/
-
+    isFormValid()
     calculaTotal()
     let newData = {};
     let selectForm = document.getElementById("selectTipFor");
