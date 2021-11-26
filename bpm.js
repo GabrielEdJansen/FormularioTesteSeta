@@ -106,7 +106,7 @@ function ExibirFormaPagamento() {
 
         if (document.getElementById("CodBolDois").value != 0) {
 
-            let eBol3 = document.getElementById('parcela3Bol') ;
+            let eBol3 = document.getElementById('parcela3Bol');
 
             eBol3.style.display = 'flex';
         }
@@ -660,6 +660,7 @@ function _saveData(data, info) {
         throw new Error("Os dados informados não são válidos.");
     }*/
     isFormValid()
+
     calculaTotal()
     let newData = {};
     let selectForm = document.getElementById("selectTipFor");
@@ -758,18 +759,24 @@ function _rollback(data, info) {
       })*/
 }
 
-
 function isFormValid() {
-    alert('Tudo ok')
+    var isNullFornec = document.getElementById("Fornec").value;
+    if (isNullFornec == '') {
+        document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+    } else {
+        document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+    }
 }
 
-// Handler de eventos do checkbox
 /*function onSelect() {
-    const isNull = document.getElementById("gridCheck").checked;
-    if (isChecked) {
-        document.getElementById("gridCheck").setAttribute("class", "form-check-input is-valid");
-    } 
+    var isNullFornec = document.getElementById("Fornec").value;
+    if(isNullFornec == ''){
+        document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+    }else{
+        document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+    }
 }*/
+
 
 // Disabling form submissions if there are invalid fields
 (function () {
