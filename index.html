@@ -66,7 +66,7 @@
         <label for="DatSol" class="form-label">Data Solicitação</label>
         <input required id="DatSol" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
-          <div class="invalid-feedback">*Campo Obrigatório</div>
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Fornecedor/CNPJ -->
@@ -92,13 +92,13 @@
         <label for="Proj" class="form-label">Projeto</label>
         <input id="Proj" type="text" required
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-          <div class="invalid-feedback">*Campo Obrigatório</div>
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="ConFin" class="form-label">Conta Financeira</label>
         <input id="ConFin" type="text" required
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-          <div class="invalid-feedback">*Campo Obrigatório</div>
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="CenCus" class="form-label">Centro de Custo</label>
@@ -153,11 +153,13 @@
         <label for="DatPag" class="form-label">Data Pagamento</label>
         <input id="DatPag" type="date" required
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-6">
         <label for="NumNf" class="form-label">Número da NF</label>
         <input id="NumNf" type="text" required
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Data Prevista Recebimento NF -->
@@ -166,6 +168,7 @@
         <label for="DatPre" class="form-label">Data Prevista Recebimento NF</label>
         <input id="DatPre" type="date" v
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Observação -->
@@ -197,6 +200,7 @@
           <option id="ForPagPix" value="Pix">Pix</option>
           <option id="ForPagBol" value="Boleto">Boleto</option>
         </select>
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Banco -->
@@ -205,6 +209,7 @@
         <label for="ForPagBanco" class="form-label">Banco</label>
         <input id="ForPagBanco" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Agencia/Conta -->
@@ -213,11 +218,13 @@
         <label for="ForPagAgencia" class="form-label">Agencia</label>
         <input id="ForPagAgencia" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-6">
         <label for="ForPagConta" class="form-label">Conta</label>
         <input id="ForPagConta" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Chave PIX -->
@@ -226,6 +233,7 @@
         <label for="ForPagChavePix" class="form-label">Chave PIX</label>
         <input id="ForPagChavePix" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!---------------------------------------------------------------------------------------------------->
@@ -259,10 +267,11 @@
         <label for="DescParUm" class="form-label">Descrição Parcela 1</label>
         <input id="DescParUm" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="VlrParUm" class="form-label">Valor Parcela 1</label>
-        <input id="VlrParUm" type="text" value="" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParUm" type="text" value="" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 1" required>
       </div>
@@ -270,6 +279,7 @@
         <label for="DatParUm" class="form-label">Data Parcela 1</label>
         <input id="DatParUm" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Código Boleto 1 -->
@@ -278,6 +288,7 @@
         <label for="CodBolUm" class="form-label">Código Boleto 1</label>
         <input id="CodBolUm" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!----------------------------------------------------------------Parcela 2---------------------------------------------------------------->
@@ -301,10 +312,11 @@
         <label for="DescParDois" class="form-label">Descrição Parcela 2</label>
         <input id="DescParDois" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="VlrParDois" class="form-label">Valor Parcela 2</label>
-        <input id="VlrParDois" type="text" value="" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParDois" type="text" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 2">
       </div>
@@ -312,6 +324,7 @@
         <label for="DatParDois" class="form-label">Data Parcela 2</label>
         <input id="DatParDois" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Código Boleto 2 -->
@@ -320,6 +333,7 @@
         <label for="CodBolDois" class="form-label">Código Boleto 2</label>
         <input id="CodBolDois" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!----------------------------------------------------------------Parcela 3---------------------------------------------------------------->
@@ -343,10 +357,11 @@
         <label for="DescParTres" class="form-label">Descrição Parcela 3</label>
         <input id="DescParTres" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="VlrParTres" class="form-label">Valor Parcela 3</label>
-        <input id="VlrParTres" type="text" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParTres" type="text" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 3">
       </div>
@@ -354,6 +369,7 @@
         <label for="DatParTres" class="form-label">Data Parcela 3</label>
         <input id="DatParTres" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Código Boleto 3 -->
@@ -362,6 +378,7 @@
         <label for="CodBolTres" class="form-label">Código Boleto 3</label>
         <input id="CodBolTres" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
 
@@ -371,10 +388,11 @@
         <label for="DescParQuatro" class="form-label">Descrição Parcela 4</label>
         <input id="DescParQuatro" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="VlrParQuatro" class="form-label">Valor Parcela 4</label>
-        <input id="VlrParQuatro" type="text" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParQuatro" type="text" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 4">
       </div>
@@ -382,6 +400,7 @@
         <label for="DatParQuatro" class="form-label">Data Parcela 4</label>
         <input id="DatParQuatro" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Código Boleto 4 -->
@@ -390,6 +409,7 @@
         <label for="CodBolQuatro" class="form-label">Código Boleto 4</label>
         <input id="CodBolQuatro" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
 
@@ -399,10 +419,11 @@
         <label for="DescParCinco" class="form-label">Descrição Parcela 5</label>
         <input id="DescParCinco" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="VlrParCinco" class="form-label">Valor Parcela 5</label>
-        <input id="VlrParCinco" type="text" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParCinco" type="text" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 5">
       </div>
@@ -410,6 +431,7 @@
         <label for="DatParCinco" class="form-label">Data Parcela 5</label>
         <input id="DatParCinco" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Código Boleto 5 -->
@@ -418,6 +440,7 @@
         <label for="CodBolCinco" class="form-label">Código Boleto 5</label>
         <input id="CodBolCinco" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
 
@@ -427,10 +450,11 @@
         <label for="DescParSeis" class="form-label">Descrição Parcela 6</label>
         <input id="DescParSeis" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="VlrParSeis" class="form-label">Valor Parcela 6</label>
-        <input id="VlrParSeis" type="text" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParSeis" type="text"  oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 6">
       </div>
@@ -438,6 +462,7 @@
         <label for="DatParSeis" class="form-label">Data Parcela 6</label>
         <input id="DatParSeis" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Código Boleto 6 -->
@@ -446,6 +471,7 @@
         <label for="CodBolSeis" class="form-label">Código Boleto 6</label>
         <input id="CodBolSeis" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
 
@@ -455,10 +481,11 @@
         <label for="DescParSete" class="form-label">Descrição Parcela 7</label>
         <input id="DescParSete" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="VlrParSete" class="form-label">Valor Parcela 7</label>
-        <input id="VlrParSete" type="text" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParSete" type="text" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 7">
       </div>
@@ -466,6 +493,7 @@
         <label for="DatParSete" class="form-label">Data Parcela 7</label>
         <input id="DatParSete" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Código Boleto 7 -->
@@ -474,6 +502,7 @@
         <label for="CodBolSete" class="form-label">Código Boleto 7</label>
         <input id="CodBolSete" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
 
@@ -483,10 +512,11 @@
         <label for="DescParOito" class="form-label">Descrição Parcela 8</label>
         <input id="DescParOito" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="VlrParOito" class="form-label">Valor Parcela 8</label>
-        <input id="VlrParOito" type="text" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParOito" type="text" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 8">
       </div>
@@ -494,6 +524,7 @@
         <label for="DatParOito" class="form-label">Data Parcela 8</label>
         <input id="DatParOito" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Código Boleto 8 -->
@@ -502,6 +533,7 @@
         <label for="CodBolOito" class="form-label">Código Boleto 8</label>
         <input id="CodBolOito" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
 
@@ -511,10 +543,11 @@
         <label for="DescParNove" class="form-label">Descrição Parcela 9</label>
         <input id="DescParNove" type="text" oninput="javascript:calculaTotal();"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="VlrParNove" class="form-label">Valor Parcela 9</label>
-        <input id="VlrParNove" type="text" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParNove" type="text" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 9">
       </div>
@@ -522,6 +555,7 @@
         <label for="DatParNove" class="form-label">Data Parcela 9</label>
         <input id="DatParNove" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Código Boleto 9 -->
@@ -530,6 +564,7 @@
         <label for="CodBolNove" class="form-label">Código Boleto 9</label>
         <input id="CodBolNove" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
 
@@ -539,10 +574,11 @@
         <label for="DescParDez" class="form-label">Descrição Parcela 10</label>
         <input id="DescParDez" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-3">
         <label for="VlrParDez" class="form-label">Valor Parcela 10</label>
-        <input id="VlrParDez" type="text" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParDez" type="text" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 10">
       </div>
@@ -550,6 +586,7 @@
         <label for="DatParDez" class="form-label">Data Parcela 10</label>
         <input id="DatParDez" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
+          <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!-- Código Boleto 10 -->
@@ -558,6 +595,7 @@
         <label for="CodBolDez" class="form-label">Código Boleto 10</label>
         <input id="CodBolDez" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
 
@@ -567,10 +605,11 @@
         <label for="DescParOnze" class="form-label">Descrição Parcela 11</label>
         <input id="DescParOnze" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-      </div>
+          <div class="invalid-feedback">*Campo Obrigatório</div>
+        </div>
       <div class="col-md-3">
         <label for="VlrParOnze" class="form-label">Valor Parcela 11</label>
-        <input id="VlrParOnze" type="text" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParOnze" type="text" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 11">
       </div>
@@ -578,7 +617,8 @@
         <label for="DatParOnze" class="form-label">Data Parcela 11</label>
         <input id="DatParOnze" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
-      </div>
+          <div class="invalid-feedback">*Campo Obrigatório</div>
+        </div>
     </div>
     <!-- Código Boleto 11 -->
     <div class="row" id="parcela11Bol" style="display: none;">
@@ -586,6 +626,7 @@
         <label for="CodBolOnze" class="form-label">Código Boleto 11</label>
         <input id="CodBolOnze" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
 
@@ -595,10 +636,11 @@
         <label for="DescParDoze" class="form-label">Descrição Parcela 12</label>
         <input id="DescParDoze" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-      </div>
+          <div class="invalid-feedback">*Campo Obrigatório</div>
+        </div>
       <div class="col-md-3">
         <label for="VlrParDoze" class="form-label">Valor Parcela 12</label>
-        <input id="VlrParDoze" type="text" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParDoze" type="text" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 12">
       </div>
@@ -606,7 +648,8 @@
         <label for="DatParDoze" class="form-label">Data Parcela 12</label>
         <input id="DatParDoze" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
-      </div>
+          <div class="invalid-feedback">*Campo Obrigatório</div>
+        </div>
     </div>
     <!-- Código Boleto 12 -->
     <div class="row" id="parcela12Bol" style="display: none;">
@@ -614,6 +657,7 @@
         <label for="CodBolDoze" class="form-label">Código Boleto 12</label>
         <input id="CodBolDoze" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
     <!----------------------------------------------------------------Adicionar/Cálcular Parcela---------------------------------------------------------------->
@@ -734,15 +778,15 @@
           Você precisa aceitar os termos para prosseguir.
         </div>
       </div>
-    
+    </div>-->
 
     <div class="row">
       <div class="col-md-6">
         <input class="btn btn-outline-success" type="button" value="Validador" onclick="isFormValid()" />
-      
+
 
       </div>
-    </div></div>-->
+    </div>
 
   </form>
 </body>
