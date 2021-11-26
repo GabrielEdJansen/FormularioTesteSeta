@@ -757,18 +757,20 @@ function _rollback(data, info) {
       })*/
 }
 
+
 function isFormValid() {
     //Tipo de Formulario
     var isNullSelectTipFor = document.getElementById("selectTipFor").value;
     if ((isNullSelectTipFor == '') || (isNullSelectTipFor == 'Selecione o tipo do formulário')) {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-invalid");
     } 
-    if (isNullSelectTipFor != '') {
+    if ((isNullSelectTipFor != '') && (isNullSelectTipFor != 'Selecione o tipo do formulário')) {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-valid");
     }
 
     //Data Solicitação
-    var isNullDatSol = document.getElementById("DatSol ").value;
+    var isNullDatSol = document.getElementById("DatSol").value;
+    alert(isNullDatSol)
     if (isNullDatSol == '') {
         document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
     } if (isNullDatSol != '') {
