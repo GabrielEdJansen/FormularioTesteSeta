@@ -1,3 +1,93 @@
+function ExibeBoleto(){
+    if (document.getElementById("selectFormPag").value == 'Boleto') {
+
+        if (document.getElementById("VlrParUm").value != 0) {
+
+            let eBol1 = document.getElementById('parcela1Bol');
+
+            eBol1.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParDois").value != 0) {
+
+            let eBol2 = document.getElementById('parcela2Bol');
+
+            eBol2.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParTres").value != 0) {
+
+            let eBol3 = document.getElementById('parcela3Bol');
+
+            eBol3.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParQuatro").value != 0) {
+
+            let eBol4 = document.getElementById('parcela4Bol');
+
+            eBol4.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParCinco").value != 0) {
+
+            let eBol5 = document.getElementById('parcela5Bol');
+
+            eBol5.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParSeis").value != 0) {
+
+            let eBol6 = document.getElementById('parcela6Bol');
+
+            eBol6.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParSete").value != 0) {
+
+            let eBol7 = document.getElementById('parcela7Bol');
+
+            eBol7.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParOito").value != 0) {
+
+            let eBol8 = document.getElementById('parcela8Bol');
+
+            eBol8.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParNove").value != 0) {
+
+            let eBol9 = document.getElementById('parcela9Bol');
+
+            eBol9.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParDez").value != 0) {
+
+            let eBol10 = document.getElementById('parcela10Bol');
+
+            eBol10.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParOnze").value != 0) {
+
+            let eBol11 = document.getElementById('parcela11Bol');
+
+            eBol11.style.display = 'flex';
+        }
+
+        if (document.getElementById("VlrParDoze").value != 0) {
+
+            let eBol12 = document.getElementById('parcela12Bol');
+
+            eBol12.style.display = 'flex';
+        }
+        
+    }   
+}
+
 function ExibirFormaPagamento() {
 
     if (document.getElementById("selectFormPag").value == 'Pix') {
@@ -92,7 +182,7 @@ function ExibirFormaPagamento() {
         eVal1.style.display = 'none';
 
 
-
+/*
         let eBol = document.getElementById('parcela1Bol');
 
         eBol.style.display = 'flex';
@@ -172,7 +262,8 @@ function ExibirFormaPagamento() {
             let eBol12 = document.getElementById('parcela12Bol');
 
             eBol12.style.display = 'flex';
-        }
+        }*/
+        ExibeBoleto()
     }
 }
 
@@ -760,12 +851,12 @@ function _rollback(data, info) {
 
 function isFormValid() {
     var retornaResultado = 0
-
+    //--------------------------------------------------TIPO DA REQUISIÇÃO--------------------------------------------------
     //Tipo de Formulario
     var isNullSelectTipFor = document.getElementById("selectTipFor").value;
     if ((isNullSelectTipFor == '') || (isNullSelectTipFor == 'Selecione o tipo do formulário')) {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-invalid");
-    } 
+    }
     if ((isNullSelectTipFor != '') && (isNullSelectTipFor != 'Selecione o tipo do formulário')) {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-valid");
         retornaResultado++
@@ -775,7 +866,7 @@ function isFormValid() {
     var isNullDatSol = document.getElementById("DatSol").value;
     if (isNullDatSol == '') {
         document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
-    } if (isNullDatSol != '') {
+    } else {
         document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
         retornaResultado++
     }
@@ -784,7 +875,7 @@ function isFormValid() {
     var isNullFornec = document.getElementById("Fornec").value;
     if (isNullFornec == '') {
         document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } if (isNullFornec != '') {
+    } else {
         document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
         retornaResultado++
     }
@@ -792,7 +883,7 @@ function isFormValid() {
     var isNullCnpj = document.getElementById("Cnpj").value;
     if (isNullCnpj == '') {
         document.getElementById("Cnpj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } if (isNullCnpj != '') {
+    } else {
         document.getElementById("Cnpj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
         retornaResultado++
     }
@@ -801,7 +892,7 @@ function isFormValid() {
     var isNullProj = document.getElementById("Proj").value;
     if (isNullProj == '') {
         document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } if (isNullProj != '') {
+    } else {
         document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
         retornaResultado++
     }
@@ -810,7 +901,7 @@ function isFormValid() {
     var isNullConFin = document.getElementById("ConFin").value;
     if (isNullConFin == '') {
         document.getElementById("ConFin").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } if (isNullConFin != '') {
+    } else {
         document.getElementById("ConFin").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
         retornaResultado++
     }
@@ -819,24 +910,507 @@ function isFormValid() {
     var isNullCenCus = document.getElementById("CenCus").value;
     if (isNullCenCus == '') {
         document.getElementById("CenCus").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } if (isNullCenCus != '') {
+    } else {
         document.getElementById("CenCus").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
         retornaResultado++
     }
-    if(retornaResultado == 7){
+
+    //--------------------------------------------------DADOS PAGAMENTO--------------------------------------------------
+    //Data Pagamento
+    var isNullDatPag = document.getElementById("DatPag").value;
+    if (isNullDatPag == '') {
+        document.getElementById("DatPag").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+    } else {
+        document.getElementById("DatPag").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+        retornaResultado++
+    }
+
+    //Número da NF
+    var isNullNumNf = document.getElementById("NumNf").value;
+    if (isNullNumNf == '') {
+        document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+    } else {
+        document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+        retornaResultado++
+    }
+
+    //Data Prevista Recebimento NF
+    var isNullDatPre = document.getElementById("DatPre").value;
+    if (isNullDatPre == '') {
+        document.getElementById("DatPre").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+    } else {
+        document.getElementById("DatPre").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+        retornaResultado++
+    }
+
+    //Observação
+    document.getElementById("ObsPag").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+    retornaResultado++
+
+    //--------------------------------------------------FORMA DO PAGAMENTO--------------------------------------------------
+    //Forma de Pagamento
+    var isNullSelectFormPag = document.getElementById("selectFormPag").value;
+    if ((isNullSelectFormPag == '') || (isNullSelectFormPag == 'Selecione a Forma de Pagamento')) {
+        document.getElementById("selectFormPag").setAttribute("class", "form-select is-invalid");
+    }
+    if ((isNullSelectFormPag != '') && (isNullSelectFormPag != 'Selecione a Forma de Pagamento')) {
+        document.getElementById("selectFormPag").setAttribute("class", "form-select is-valid");
+        retornaResultado++
+    }
+
+    if (document.getElementById("selectFormPag").value == 'Pix') {
+
+        document.getElementById("ForPagBanco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("ForPagAgencia").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("ForPagConta").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolQuatro").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolCinco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolSeis").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolSete").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolOito").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolNove").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolDez").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+
+        var isNullForPagChavePix = document.getElementById("ForPagChavePix").value;
+        if (isNullForPagChavePix == '') {
+            document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("selectFormPag").value == 'Depósito') {
+
+        document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolQuatro").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolCinco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolSeis").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolSete").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolOito").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolNove").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolDez").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("CodBolDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+
+        var isNullForPagBanco = document.getElementById("ForPagBanco").value;
+        if (isNullForPagBanco == '') {
+            document.getElementById("ForPagBanco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("ForPagBanco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+
+        var isNullForPagAgencia = document.getElementById("ForPagAgencia").value;
+        if (isNullForPagAgencia == '') {
+            document.getElementById("ForPagAgencia").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("ForPagAgencia").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+
+        var isNullForPagConta = document.getElementById("ForPagConta").value;
+        if (isNullForPagConta == '') {
+            document.getElementById("ForPagConta").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("ForPagConta").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("selectFormPag").value == 'Boleto') {
+
+        document.getElementById("ForPagBanco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("ForPagAgencia").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("ForPagConta").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+        document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
+
+
+        if (document.getElementById("VlrParUm").value != 0) {
+            var isNullCodBolUm = document.getElementById("CodBolUm").value;
+            if (isNullCodBolUm == '') {
+                document.getElementById("CodBolUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+
+        if (document.getElementById("VlrParDois").value != 0) {
+            var isNullCodBolDois = document.getElementById("CodBolDois").value;
+            if (isNullCodBolDois == '') {
+                document.getElementById("CodBolDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+
+        if (document.getElementById("VlrParTres").value != 0) {
+            var isNullCodBolTres = document.getElementById("CodBolTres").value;
+            if (isNullCodBolTres == '') {
+                document.getElementById("CodBolTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+
+        if (document.getElementById("VlrParQuatro").value != 0) {
+            var isNullCodBolQuatro = document.getElementById("CodBolQuatro").value;
+            if (isNullCodBolQuatro == '') {
+                document.getElementById("CodBolQuatro").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolQuatro").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+
+        if (document.getElementById("VlrParCinco").value != 0) {
+            var isNullCodBolCinco = document.getElementById("CodBolCinco").value;
+            if (isNullCodBolCinco == '') {
+                document.getElementById("CodBolCinco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolCinco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+
+        if (document.getElementById("VlrParSeis").value != 0) {
+            var isNullCodBolSeis = document.getElementById("CodBolSeis").value;
+            if (isNullCodBolSeis == '') {
+                document.getElementById("CodBolSeis").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolSeis").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+
+        if (document.getElementById("VlrParSete").value != 0) {
+            var isNullCodBolSete = document.getElementById("CodBolSete").value;
+            if (isNullCodBolSete == '') {
+                document.getElementById("CodBolSete").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolSete").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+
+        if (document.getElementById("VlrParOito").value != 0) {
+            var isNullCodBolOito = document.getElementById("CodBolOito").value;
+            if (isNullCodBolOito == '') {
+                document.getElementById("CodBolOito").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolOito").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+
+        if (document.getElementById("VlrParNove").value != 0) {
+            var isNullCodBolNove = document.getElementById("CodBolNove").value;
+            if (isNullCodBolNove == '') {
+                document.getElementById("CodBolNove").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolNove").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+
+        if (document.getElementById("VlrParDez").value != 0) {
+            var isNullCodBolDez = document.getElementById("CodBolDez").value;
+            if (isNullCodBolDez == '') {
+                document.getElementById("CodBolDez").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolDez").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+
+        if (document.getElementById("VlrParOnze").value != 0) {
+            var isNullCodBolOnze = document.getElementById("CodBolOnze").value;
+            if (isNullCodBolOnze == '') {
+                document.getElementById("CodBolOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+        if (document.getElementById("VlrParDoze").value != 0) {
+            var isNullCodBolDoze = document.getElementById("CodBolDoze").value;
+            if (isNullCodBolDoze == '') {
+                document.getElementById("CodBolDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            } else {
+                document.getElementById("CodBolDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+                retornaResultado++
+            }
+        }
+    }
+    //--------------------------------------------------DESCRIÇÃO DE PAGAMENTO / PARCELAMENTO--------------------------------------------------  
+    if (document.getElementById("VlrParUm").value != 0) {
+        //Valor Parcela 1
+        document.getElementById("VlrParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 1
+        var isNullDescParUm = document.getElementById("DescParUm").value;
+        if (isNullDescParUm == '') {
+            document.getElementById("DescParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 1
+        var isNullDatParUm = document.getElementById("DatParUm").value;
+        if (isNullDatParUm == '') {
+            document.getElementById("DatParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+
+    if (document.getElementById("VlrParDois").value != 0) {
+        //Valor Parcela 2
+        document.getElementById("VlrParDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 2
+        var isNullDescParDois = document.getElementById("DescParDois").value;
+        if (isNullDescParDois == '') {
+            document.getElementById("DescParDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 2
+        var isNullDatParDois = document.getElementById("DatParDois").value;
+        if (isNullDatParDois == '') {
+            document.getElementById("DatParDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("VlrParTres").value != 0) {
+        //Valor Parcela 3
+        document.getElementById("VlrParTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 3
+        var isNullDescParTres = document.getElementById("DescParTres").value;
+        if (isNullDescParTres == '') {
+            document.getElementById("DescParTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 3
+        var isNullDatParTres = document.getElementById("DatParTres").value;
+        if (isNullDatParTres == '') {
+            document.getElementById("DatParTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("VlrParQuatro").value != 0) {
+        //Valor Parcela 4
+        document.getElementById("VlrParQuatro").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 4
+        var isNullDescParQuatro = document.getElementById("DescParQuatro").value;
+        if (isNullDescParQuatro == '') {
+            document.getElementById("DescParQuatro").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParQuatro").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 4
+        var isNullDatParQuatro = document.getElementById("DatParQuatro").value;
+        if (isNullDatParQuatro == '') {
+            document.getElementById("DatParQuatro").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParQuatro").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("VlrParCinco").value != 0) {
+        //Valor Parcela 5
+        document.getElementById("VlrParCinco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 5
+        var isNullDescParCinco = document.getElementById("DescParCinco").value;
+        if (isNullDescParCinco == '') {
+            document.getElementById("DescParCinco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParCinco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 5
+        var isNullDatParCinco = document.getElementById("DatParCinco").value;
+        if (isNullDatParCinco == '') {
+            document.getElementById("DatParCinco").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParCinco").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("VlrParSeis").value != 0) {
+        //Valor Parcela 6
+        document.getElementById("VlrParSeis").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 6
+        var isNullDescParSeis = document.getElementById("DescParSeis").value;
+        if (isNullDescParSeis == '') {
+            document.getElementById("DescParSeis").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParSeis").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 6
+        var isNullDatParSeis = document.getElementById("DatParSeis").value;
+        if (isNullDatParSeis == '') {
+            document.getElementById("DatParSeis").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParSeis").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("VlrParSete").value != 0) {
+        //Valor Parcela 7
+        document.getElementById("VlrParSete").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 7
+        var isNullDescParSete = document.getElementById("DescParSete").value;
+        if (isNullDescParSete == '') {
+            document.getElementById("DescParSete").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParSete").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 7
+        var isNullDatParSete = document.getElementById("DatParSete").value;
+        if (isNullDatParSete == '') {
+            document.getElementById("DatParSete").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParSete").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("VlrParOito").value != 0) {
+        //Valor Parcela 8
+        document.getElementById("VlrParOito").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 8
+        var isNullDescParOito = document.getElementById("DescParOito").value;
+        if (isNullDescParOito == '') {
+            document.getElementById("DescParOito").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParOito").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 8
+        var isNullDatParOito = document.getElementById("DatParOito").value;
+        if (isNullDatParOito == '') {
+            document.getElementById("DatParOito").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParOito").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("VlrParNove").value != 0) {
+        //Valor Parcela 9
+        document.getElementById("VlrParNove").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 9
+        var isNullDescParNove = document.getElementById("DescParNove").value;
+        if (isNullDescParNove == '') {
+            document.getElementById("DescParNove").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParNove").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 9
+        var isNullDatParNove = document.getElementById("DatParNove").value;
+        if (isNullDatParNove == '') {
+            document.getElementById("DatParNove").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParNove").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("VlrParDez").value != 0) {
+        //Valor Parcela 10
+        document.getElementById("VlrParDez").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 10
+        var isNullDescParDez = document.getElementById("DescParDez").value;
+        if (isNullDescParDez == '') {
+            document.getElementById("DescParDez").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParDez").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 10
+        var isNullDatParDez = document.getElementById("DatParDez").value;
+        if (isNullDatParDez == '') {
+            document.getElementById("DatParDez").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParDez").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+    if (document.getElementById("VlrParOnze").value != 0) {
+        //Valor Parcela 11
+        document.getElementById("VlrParOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 11
+        var isNullDescParOnze = document.getElementById("DescParOnze").value;
+        if (isNullDescParOnze == '') {
+            document.getElementById("DescParOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 11
+        var isNullDatParOnze = document.getElementById("DatParOnze").value;
+        if (isNullDatParOnze == '') {
+            document.getElementById("DatParOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+    if (document.getElementById("VlrParDoze").value != 0) {
+        //Valor Parcela 12
+        document.getElementById("VlrParDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        //Descrição Parcela 12
+        var isNullDescParDoze = document.getElementById("DescParDoze").value;
+        if (isNullDescParDoze == '') {
+            document.getElementById("DescParDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        } else {
+            document.getElementById("DescParDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            retornaResultado++
+        }
+        //Data Parcela 12
+        var isNullDatParDoze = document.getElementById("DatParDoze").value;
+        if (isNullDatParDoze == '') {
+            document.getElementById("DatParDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
+        } else {
+            document.getElementById("DatParDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
+            retornaResultado++
+        }
+    }
+
+    //--------------------------------------------------RETORNO FUNÇÃO--------------------------------------------------  
+    if (retornaResultado == 7) {
         return true
     }
 }
-
-/*function onSelect() {
-    var isNullFornec = document.getElementById("Fornec").value;
-    if(isNullFornec == ''){
-        document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    }else{
-        document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
-    }
-}*/
-
 
 // Disabling form submissions if there are invalid fields
 (function () {
