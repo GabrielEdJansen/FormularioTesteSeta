@@ -762,7 +762,7 @@ function isFormValid() {
     var isNullSelectTipFor = document.getElementById("selectTipFor").value;
     if (isNullSelectTipFor == '') {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-invalid");
-    } if(isNullSelectTipFor =! '') {
+    } if (isNullSelectTipFor =! '') {
         document.getElementById("selectTipFor").setAttribute("class", "form-select is-valid");
     }
 
@@ -770,7 +770,7 @@ function isFormValid() {
     var isNullDatSol = document.getElementById("DatSol ").value;
     if (isNullDatSol == '') {
         document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
-    } (isNullDatSol != '') {
+    } if (isNullDatSol != '') {
         document.getElementById("DatSol").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
     }
 
@@ -778,7 +778,7 @@ function isFormValid() {
     var isNullFornec = document.getElementById("Fornec").value;
     if (isNullFornec == '') {
         document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } if(isNullFornec != '') {
+    } if (isNullFornec != '') {
         document.getElementById("Fornec").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
     }
     //CNPJ
@@ -793,7 +793,7 @@ function isFormValid() {
     var isNullProj= document.getElementById("Proj").value;
     if (isNullProj == '') {
         document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    } if(isNullProj != '') {
+    } if (isNullProj != '') {
         document.getElementById("Proj").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
     }
 
