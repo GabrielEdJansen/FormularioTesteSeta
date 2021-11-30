@@ -721,10 +721,22 @@ function _init(data, info) {
             document.getElementById("DatParUm").setAttribute("value", DatParUm);
             document.getElementById("CodBolUm").setAttribute("value", CodBolUm);
 
+            if(document.getElementById("DescParDois").value != "undefined"){
             document.getElementById("DescParDois").setAttribute("value", DescParDois);
+            }
+            if(document.getElementById("VlrParDois").value != "undefined"){
+            document.getElementById("VlrParDois").setAttribute("value", VlrParDois);
+            }
+            if(document.getElementById("DatParDois").value != "undefined"){
+            document.getElementById("DatParDois").setAttribute("value", DatParDois);
+            }
+            if(document.getElementById("CodBolDois").value != "undefined"){
+            document.getElementById("CodBolDois").setAttribute("value", CodBolDois);
+            }
+            /*document.getElementById("DescParDois").setAttribute("value", DescParDois);
             document.getElementById("VlrParDois").setAttribute("value", VlrParDois);
             document.getElementById("DatParDois").setAttribute("value", DatParDois);
-            document.getElementById("CodBolDois").setAttribute("value", CodBolDois);
+            document.getElementById("CodBolDois").setAttribute("value", CodBolDois);*/
 
             document.getElementById("DescParTres").setAttribute("value", DescParTres);
             document.getElementById("VlrParTres").setAttribute("value", VlrParTres);
