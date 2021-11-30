@@ -816,10 +816,23 @@ function _saveData(data, info) {
     newData.DatParUm = document.getElementById("DatParUm").value;
     newData.CodBolUm = document.getElementById("CodBolUm").value;
 
+    if(document.getElementById("DescParDois").value != null){
+        newData.DescParDois = document.getElementById("DescParDois").value;
+    }
+    if(document.getElementById("VlrParDois").value != " "){
+        newData.VlrParDois = document.getElementById("VlrParDois").value;
+    }
+    if(document.getElementById("DatParDois").value != " "){
+        newData.DatParDois = document.getElementById("DatParDois").value;
+    }
+    if(document.getElementById("VlrParDois").value != " "){
+        newData.CodBolDois = document.getElementById("CodBolDois").value;
+    }
+    /*
     newData.DescParDois = document.getElementById("DescParDois").value;
     newData.VlrParDois = document.getElementById("VlrParDois").value;
     newData.DatParDois = document.getElementById("DatParDois").value;
-    newData.CodBolDois = document.getElementById("CodBolDois").value;
+    newData.CodBolDois = document.getElementById("CodBolDois").value;*/
 
     newData.DescParTres = document.getElementById("DescParTres").value;
     newData.VlrParTres = document.getElementById("VlrParTres").value;
