@@ -633,6 +633,8 @@ function _init(data, info) {
             }
 
             console.log("Carregando Dados", map);
+            const nomFun = map.get("nomFun");
+            const emaFun= map.get("emaFun");
             const selectTipFor = map.get("selectTipFor");
             const selectFormPag = map.get("selectFormPag");
             const DatSol = map.get("DatSol");
@@ -713,7 +715,8 @@ function _init(data, info) {
             const ForPagChavePix = map.get("ForPagChavePix");
 
 
-
+            document.getElementById("nomFun").setAttribute("value", nomFun);
+            document.getElementById("emaFun").setAttribute("value", emaFun);
             document.getElementById("selectTipFor").value = selectTipFor;
             document.getElementById("selectFormPag").value = selectFormPag;
             document.getElementById("DatSol").setAttribute("value", DatSol);
@@ -821,6 +824,9 @@ function _saveData(data, info) {
     newData.NumNf = document.getElementById("NumNf").value;
     newData.DatPre = document.getElementById("DatPre").value;
     newData.ObsPag = document.getElementById("ObsPag").value;
+
+    newData.nomFun = document.getElementById("nomFun").value;
+    newData.emaFun = document.getElementById("emaFun").value;
 
     newData.DescParUm = document.getElementById("DescParUm").value;
     newData.VlrParUm = document.getElementById("VlrParUm").value;
