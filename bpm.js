@@ -1,5 +1,5 @@
-function testefunc(){
-    if(document.getElementById("VlrParDois").value != ""){
+function testefunc() {
+    if (document.getElementById("VlrParDois").value != "") {
         alert("teste")
     }
 }
@@ -11,7 +11,7 @@ function ExibeBoleto() {
 
         document.getElementById("ForPagBanco").value = ''
         document.getElementById("ForPagAgencia").value = ''
-        document.getElementById("ForPagConta").value = ''  
+        document.getElementById("ForPagConta").value = ''
 
 
         if (document.getElementById("VlrParUm").value != 0) {
@@ -120,7 +120,7 @@ function ExibirFormaPagamento() {
 
         document.getElementById("ForPagBanco").value = ''
         document.getElementById("ForPagAgencia").value = ''
-        document.getElementById("ForPagConta").value = ''        
+        document.getElementById("ForPagConta").value = ''
 
         let eVal2 = document.getElementById('PagPix');
 
@@ -161,7 +161,7 @@ function ExibirFormaPagamento() {
 
     }
     if (document.getElementById("selectFormPag").value == 'Depósito') {
-        
+
         document.getElementById("CodBolUm").value = ''
         document.getElementById("CodBolDois").value = ''
         document.getElementById("CodBolTres").value = ''
@@ -177,7 +177,7 @@ function ExibirFormaPagamento() {
 
         document.getElementById("ForPagChavePix").value = ''
 
-        
+
         let eVal = document.getElementById('PagBanco');
 
         eVal.style.display = 'flex';
@@ -610,6 +610,11 @@ function _init(data, info) {
 
     info
         .getUserData()
+        .then(function (user) {
+            // Usuário logado
+            document.getElementById("nomFun").setAttribute("value", user.fullname);
+            document.getElementById("emaFun").setAttribute("value", user.email);
+        })
         .then(function () {
             info.getPlatformData().then(function (platformData) {
                 // Informações da G7
@@ -826,10 +831,10 @@ function _saveData(data, info) {
     newData.CodBolUm = document.getElementById("CodBolUm").value;
 
     newData.DescParDois = document.getElementById("DescParDois").value;
-    if(document.getElementById("VlrParDois").value > 0){
-      newData.VlrParDois = document.getElementById("VlrParDois").value;  
+    if (document.getElementById("VlrParDois").value > 0) {
+        newData.VlrParDois = document.getElementById("VlrParDois").value;
     }
-    
+
     newData.DatParDois = document.getElementById("DatParDois").value;
     newData.CodBolDois = document.getElementById("CodBolDois").value;
 
