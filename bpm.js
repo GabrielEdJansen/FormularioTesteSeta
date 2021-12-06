@@ -1,3 +1,9 @@
+function testefunc(){
+    if(document.getElementById("VlrParDois").value != ""){
+        alert("teste")
+    }
+}
+
 function ExibeBoleto() {
     if (document.getElementById("selectFormPag").value == 'Boleto') {
 
@@ -628,6 +634,7 @@ function _init(data, info) {
             const Fornec = map.get("Fornec");
             const Cnpj = map.get("Cnpj");
             const Proj = map.get("Proj");
+            const ObsRetErp = map.get("ObsRetErp");
             const ConFin = map.get("ConFin");
             const CenCus = map.get("CenCus");
             const DatPag = map.get("DatPag");
@@ -709,6 +716,7 @@ function _init(data, info) {
             document.getElementById("Fornec").setAttribute("value", Fornec);
             document.getElementById("Cnpj").setAttribute("value", Cnpj);
             document.getElementById("Proj").setAttribute("value", Proj);
+            document.getElementById("ObsRetErp").setAttribute("value", ObsRetErp);
             document.getElementById("ConFin").setAttribute("value", ConFin);
             document.getElementById("CenCus").setAttribute("value", CenCus);
             document.getElementById("DatPag").setAttribute("value", DatPag);
@@ -721,7 +729,6 @@ function _init(data, info) {
             document.getElementById("DatParUm").setAttribute("value", DatParUm);
             document.getElementById("CodBolUm").setAttribute("value", CodBolUm);
 
-           
             document.getElementById("DescParDois").setAttribute("value", DescParDois);
             document.getElementById("VlrParDois").setAttribute("value", VlrParDois);
             document.getElementById("DatParDois").setAttribute("value", DatParDois);
@@ -805,6 +812,7 @@ function _saveData(data, info) {
     newData.Fornec = document.getElementById("Fornec").value;
     newData.Cnpj = document.getElementById("Cnpj").value;
     newData.Proj = document.getElementById("Proj").value;
+    newData.ObsRetErp = document.getElementById("ObsRetErp").value;
     newData.ConFin = document.getElementById("ConFin").value;
     newData.CenCus = document.getElementById("CenCus").value;
     newData.DatPag = document.getElementById("DatPag").value;
@@ -817,23 +825,13 @@ function _saveData(data, info) {
     newData.DatParUm = document.getElementById("DatParUm").value;
     newData.CodBolUm = document.getElementById("CodBolUm").value;
 
-    if(document.getElementById("DescParDois").value != ""){
-        newData.DescParDois = document.getElementById("DescParDois").value;
-    }
-    if(document.getElementById("VlrParDois").value != ""){
-        newData.VlrParDois = document.getElementById("VlrParDois").value;
-    }
-    if(document.getElementById("DatParDois").value != ""){
-        newData.DatParDois = document.getElementById("DatParDois").value;
-    }
-    if(document.getElementById("CodBolDois").value != ""){
-        newData.CodBolDois = document.getElementById("CodBolDois").value;
-    }
-    /*
     newData.DescParDois = document.getElementById("DescParDois").value;
-    newData.VlrParDois = document.getElementById("VlrParDois").value;
+    if(document.getElementById("VlrParDois").value > 0){
+      newData.VlrParDois = document.getElementById("VlrParDois").value;  
+    }
+    
     newData.DatParDois = document.getElementById("DatParDois").value;
-    newData.CodBolDois = document.getElementById("CodBolDois").value;*/
+    newData.CodBolDois = document.getElementById("CodBolDois").value;
 
     newData.DescParTres = document.getElementById("DescParTres").value;
     newData.VlrParTres = document.getElementById("VlrParTres").value;
