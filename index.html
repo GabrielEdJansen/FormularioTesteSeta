@@ -65,7 +65,8 @@
     <div class="row">
       <div class="col-md-4">
         <label required for="selectTipFor" class="form-label">Tipo de Formulario</label>
-        <select name="select" id="selectTipFor" class="form-select" aria-label="Default select example">
+        <select name="select" id="selectTipFor" class="form-select" aria-label="Default select example"
+          onchange="javascript:selecionaTipoFormulario();">
           <option selected>Selecione o tipo do formulário</option>
           <option id="TipForPag" value="Pagamento">Pagamento</option>
           <option id="TipForAdi" value="Adiantamento">Adiantamento</option>
@@ -168,17 +169,20 @@
         </td>
       </tr>
     </table>
-    <!-- Data Pagamento/Número da NF -->
+    <!-- Número da NF -->
+    <div class="row" id="NumNf" style="display: none;">
+      <div class="col-md-6">
+        <label for="NumNf" class="form-label">Número da NF</label>
+        <input id="NumNf" type="text" 
+          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <div class="invalid-feedback">*Campo Obrigatório</div>
+      </div>
+    </div>
+    <!-- Data Pagamento -->
     <div class="row">
       <div class="col-md-6">
         <label for="DatPag" class="form-label">Data Pagamento</label>
         <input id="DatPag" type="date" required
-          class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
-        <div class="invalid-feedback">*Campo Obrigatório</div>
-      </div>
-      <div class="col-md-6">
-        <label for="NumNf" class="form-label">Número da NF</label>
-        <input id="NumNf" type="text" required
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
@@ -187,7 +191,7 @@
     <div class="row">
       <div class="col-md-6">
         <label for="DatPre" class="form-label">Data Prevista Recebimento NF</label>
-        <input id="DatPre" type="date" v
+        <input id="DatPre" type="date"
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
@@ -200,6 +204,7 @@
           class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date">
       </div>
     </div>
+
 
     <!---------------------------------------------------------------------------------------------------->
     <h5>FORMA DO PAGAMENTO</h5>
