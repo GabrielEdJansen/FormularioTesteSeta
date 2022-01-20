@@ -1,22 +1,249 @@
-function selecionaTipoFormulario() {
-    if (document.getElementById("selectTipFor").value == 'Adiantamento') {
-      
-        let eVal = document.getElementById('PagNumNf');
+function removerLinhaTabela() {
+    var nTotalSomatoria = 0
+    var nTotalAuxiliarParc = 0
 
-        eVal.style.display = 'flex';  
+    if (document.getElementById("parcela12").style.display == 'flex') {
+        let eBol12 = document.getElementById('parcela12');
 
-        document.getElementById("NumNf").value = ''
-    } 
-    if (document.getElementById("selectTipFor").value == 'Pagamento') {
-      
-        let eVal = document.getElementById('PagNumNf');
+        eBol12.style.display = 'none';
 
-        eVal.style.display = 'none'; 
-        
-        document.getElementById("NumNf").value = ''
-    }   
+        nTotalAuxiliarParc = document.getElementById("VlrParDoze").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParDoze").value = ''
+        document.getElementById("VlrParDoze").value = 0
+        document.getElementById("DatParDoze").value = ''
+        document.getElementById("CodBolDoze").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
+    if (document.getElementById("parcela11").style.display == 'flex') {
+        let eBol11 = document.getElementById('parcela11');
+
+        eBol11.style.display = 'none';
+
+        nTotalAuxiliarParc = document.getElementById("VlrParOnze").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParOnze").value = ''
+        document.getElementById("VlrParOnze").value = 0
+        document.getElementById("DatParOnze").value = ''
+        document.getElementById("CodBolOnze").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
+
+    if (document.getElementById("parcela10").style.display == 'flex') {
+        let eBol10 = document.getElementById('parcela10');
+
+        eBol10.style.display = 'none';
+
+        nTotalAuxiliarParc = document.getElementById("VlrParDez").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParDez").value = ''
+        document.getElementById("VlrParDez").value = 0
+        document.getElementById("DatParDez").value = ''
+        document.getElementById("CodBolDez").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
+
+    if (document.getElementById("parcela9").style.display == 'flex') {
+        let eBol9 = document.getElementById('parcela9');
+
+        eBol9.style.display = 'none';
+
+        nTotalAuxiliarParc = document.getElementById("VlrParNove").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParNove").value = ''
+        document.getElementById("VlrParNove").value = 0
+        document.getElementById("DatParNove").value = ''
+        document.getElementById("CodBolNove").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
+
+    if (document.getElementById("parcela8").style.display == 'flex') {
+        let eBol8 = document.getElementById('parcela8');
+
+        eBol8.style.display = 'none';
+
+        nTotalAuxiliarParc = document.getElementById("VlrParOito").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParOito").value = ''
+        document.getElementById("VlrParOito").value = 0
+        document.getElementById("DatParOito").value = ''
+        document.getElementById("CodBolOito").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
+
+    if (document.getElementById("parcela7").style.display == 'flex') {
+        let eBol7 = document.getElementById('parcela7');
+
+        eBol7.style.display = 'none';
+
+        nTotalAuxiliarParc = document.getElementById("VlrParSete").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParSete").value = ''
+        document.getElementById("VlrParSete").value = 0
+        document.getElementById("DatParSete").value = ''
+        document.getElementById("CodBolSete").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
+
+    if (document.getElementById("parcela6").style.display == 'flex') {
+        let eBol6 = document.getElementById('parcela6');
+
+        eBol6.style.display = 'none';
+
+        nTotalAuxiliarParc = document.getElementById("VlrParSeis").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParSeis").value = ''
+        document.getElementById("VlrParSeis").value = 0
+        document.getElementById("DatParSeis").value = ''
+        document.getElementById("CodBolSeis").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
+
+    if (document.getElementById("parcela5").style.display == 'flex') {
+        let eBol5 = document.getElementById('parcela5');
+
+        eBol5.style.display = 'none';
+
+        nTotalAuxiliarParc = document.getElementById("VlrParCinco").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParCinco").value = ''
+        document.getElementById("VlrParCinco").value = 0
+        document.getElementById("DatParCinco").value = ''
+        document.getElementById("CodBolCinco").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
+
+    if (document.getElementById("parcela4").style.display == 'flex') {
+        let eBol4 = document.getElementById('parcela4');
+
+        eBol4.style.display = 'none';
+
+        nTotalAuxiliarParc = document.getElementById("VlrParQuatro").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParQuatro").value = ''
+        document.getElementById("VlrParQuatro").value = 0
+        document.getElementById("DatParQuatro").value = ''
+        document.getElementById("CodBolQuatro").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
+
+    if (document.getElementById("parcela3").style.display == 'flex') {
+        let eBol3 = document.getElementById('parcela3');
+
+        eBol3.style.display = 'none';
+
+        nTotalAuxiliarParc = document.getElementById("VlrParTres").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParTres").value = ''
+        document.getElementById("VlrParTres").value = 0
+        document.getElementById("DatParTres").value = ''
+        document.getElementById("CodBolTres").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
+
+    if (document.getElementById("parcela2").style.display == 'flex') {
+        let eBol2 = document.getElementById('parcela2');
+
+        eBol2.style.display = 'none';
+
+        nTotalAuxiliarParc = document.getElementById("VlrParDois").value
+        nTotalSomatoria = document.getElementById("TotalPagarPar").value
+
+        nTotalSomatoria = parseFloat(retornaInteiro(nTotalSomatoria)) - parseFloat(retornaInteiro(nTotalAuxiliarParc));
+
+        var VlrTotSumConvert = parseFloat(nTotalSomatoria).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+        document.getElementById("DescParDois").value = ''
+        document.getElementById("VlrParDois").value = 0
+        document.getElementById("DatParDois").value = ''
+        document.getElementById("CodBolDois").value = ''
+        document.getElementById("TotalPagarPar").value = VlrTotSumConvert
+        return 0
+    }
 }
 
+
+function selecionaTipoFormulario() {
+    if (document.getElementById("selectTipFor").value == 'Adiantamento') {
+
+        let eVal = document.getElementById('PagNumNf');
+
+        eVal.style.display = 'flex';
+
+        document.getElementById("NumNf").value = ''
+    }
+    if (document.getElementById("selectTipFor").value == 'Pagamento') {
+
+        let eVal = document.getElementById('PagNumNf');
+
+        eVal.style.display = 'none';
+
+        document.getElementById("NumNf").value = ''
+    }
+}
 
 function testefunc() {
     if (document.getElementById("VlrParDois").value != "") {
@@ -572,7 +799,7 @@ function _init(data, info) {
 
             console.log("Carregando Dados", map);
             const nomFun = map.get("nomFun");
-            const emaFun= map.get("emaFun");
+            const emaFun = map.get("emaFun");
             const selectTipFor = map.get("selectTipFor");
             const selectFormPag = map.get("selectFormPag");
             const DatSol = map.get("DatSol");
