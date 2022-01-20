@@ -173,7 +173,7 @@
     <div class="row" id="PagNumNf" style="display: none;">
       <div class="col-md-6">
         <label for="NumNf" class="form-label">Número da NF</label>
-        <input id="NumNf" type="text" 
+        <input id="NumNf" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
@@ -297,7 +297,7 @@
       </div>
       <div class="col-md-3">
         <label for="VlrParUm" class="form-label">Valor Parcela 1</label>
-        <input id="VlrParUm" value="0" type="text" value="" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
+        <input id="VlrParUm" type="text" value="" oninput="ExibeBoleto()" onKeyUp="mascaraMoeda(this, event)"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required"
           placeholder="Digite o valor da parcela 1">
         <div class="invalid-feedback">*Campo Obrigatório</div>
@@ -687,13 +687,14 @@
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
-    <!----------------------------------------------------------------Adicionar/Cálcular Parcela---------------------------------------------------------------->
+    <!----------------------------------------------------------------Adicionar/Cálcular Parcela/Remover Parcela---------------------------------------------------------------->
     <div class="row">
-      <div class="col-md-6">
-        <input class="btn btn-outline-success" type="button" value="Adicionar parcela" onclick="inserirLinhaTabela()" />
-
+      <div class="text-center">
+        <button type="button" class="btn btn-outline-success" onclick="inserirLinhaTabela()">Adicionar parcela</button>
+        <button type="button" class="btn btn-outline-success" onclick="removerLinhaTabela()">Remover Última Parcela</button>
       </div>
     </div>
+
     <!-- Total a Pagar -->
     <div class="row">
       <div class="col-md-12">
