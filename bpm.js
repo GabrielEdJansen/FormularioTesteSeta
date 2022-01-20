@@ -1,3 +1,18 @@
+function selecionaTipoFormulario() {
+    if (document.getElementById("selectTipFor").value == 'Adiantamento') {
+      
+        let eVal = document.getElementById('NumNf');
+
+        eVal.style.display = 'flex';  
+    } 
+    if (document.getElementById("selectTipFor").value == 'Pagamento') {
+      
+        let eVal = document.getElementById('NumNf');
+
+        eVal.style.display = 'none';  
+    }   
+}
+
 function testefunc() {
     if (document.getElementById("VlrParDois").value != "") {
         alert("teste")
