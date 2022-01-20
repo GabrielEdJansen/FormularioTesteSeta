@@ -1,3 +1,7 @@
+function isValid(str) {
+    return !/[ ~`!@#$%\^&*()+=\-\[\]\\';,/{}|\\":<>\?]/g.test(str);
+}
+
 function removerLinhaTabela() {
     var nTotalSomatoria = 0
     var nTotalAuxiliarParc = 0
@@ -6,6 +10,10 @@ function removerLinhaTabela() {
         let eBol12 = document.getElementById('parcela12');
 
         eBol12.style.display = 'none';
+
+        let eBol = document.getElementById('parcela12Bol');
+
+        eBol.style.display = 'none';
 
         nTotalAuxiliarParc = document.getElementById("VlrParDoze").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
@@ -26,6 +34,10 @@ function removerLinhaTabela() {
         let eBol11 = document.getElementById('parcela11');
 
         eBol11.style.display = 'none';
+
+        let eBol = document.getElementById('parcela11Bol');
+
+        eBol.style.display = 'none';
 
         nTotalAuxiliarParc = document.getElementById("VlrParOnze").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
@@ -48,6 +60,10 @@ function removerLinhaTabela() {
 
         eBol10.style.display = 'none';
 
+        let eBol = document.getElementById('parcela10Bol');
+
+        eBol.style.display = 'none';
+
         nTotalAuxiliarParc = document.getElementById("VlrParDez").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
 
@@ -69,6 +85,10 @@ function removerLinhaTabela() {
 
         eBol9.style.display = 'none';
 
+        let eBol = document.getElementById('parcela9Bol');
+
+        eBol.style.display = 'none';
+
         nTotalAuxiliarParc = document.getElementById("VlrParNove").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
 
@@ -88,6 +108,10 @@ function removerLinhaTabela() {
         let eBol8 = document.getElementById('parcela8');
 
         eBol8.style.display = 'none';
+
+        let eBol = document.getElementById('parcela8Bol');
+
+        eBol.style.display = 'none';
 
         nTotalAuxiliarParc = document.getElementById("VlrParOito").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
@@ -109,6 +133,10 @@ function removerLinhaTabela() {
 
         eBol7.style.display = 'none';
 
+        let eBol = document.getElementById('parcela7Bol');
+
+        eBol.style.display = 'none';
+
         nTotalAuxiliarParc = document.getElementById("VlrParSete").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
 
@@ -128,6 +156,10 @@ function removerLinhaTabela() {
         let eBol6 = document.getElementById('parcela6');
 
         eBol6.style.display = 'none';
+
+        let eBol = document.getElementById('parcela6Bol');
+
+        eBol.style.display = 'none';
 
         nTotalAuxiliarParc = document.getElementById("VlrParSeis").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
@@ -149,6 +181,10 @@ function removerLinhaTabela() {
 
         eBol5.style.display = 'none';
 
+        let eBol = document.getElementById('parcela5Bol');
+
+        eBol.style.display = 'none';
+
         nTotalAuxiliarParc = document.getElementById("VlrParCinco").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
 
@@ -168,6 +204,10 @@ function removerLinhaTabela() {
         let eBol4 = document.getElementById('parcela4');
 
         eBol4.style.display = 'none';
+
+        let eBol = document.getElementById('parcela4Bol');
+
+        eBol.style.display = 'none';
 
         nTotalAuxiliarParc = document.getElementById("VlrParQuatro").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
@@ -189,6 +229,10 @@ function removerLinhaTabela() {
 
         eBol3.style.display = 'none';
 
+        let eBol = document.getElementById('parcela3Bol');
+
+        eBol.style.display = 'none';
+
         nTotalAuxiliarParc = document.getElementById("VlrParTres").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
 
@@ -208,6 +252,10 @@ function removerLinhaTabela() {
         let eBol2 = document.getElementById('parcela2');
 
         eBol2.style.display = 'none';
+
+        let eBol = document.getElementById('parcela2Bol');
+
+        eBol.style.display = 'none';
 
         nTotalAuxiliarParc = document.getElementById("VlrParDois").value
         nTotalSomatoria = document.getElementById("TotalPagarPar").value
