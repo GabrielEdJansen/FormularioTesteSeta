@@ -172,9 +172,18 @@
     <!-- Número da NF -->
     <div class="row" id="PagNumNf" style="display: none;">
       <div class="col-md-6">
-        <label for="NumNf" class="form-label">Número da NF</label>
+        <label for="NumNf" class="form-label">CNPJ do Tomador</label>
         <input id="NumNf" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+          <script type="text/javascript">
+            $('#NumNf').mask('000.000.000-00', {
+              onKeyPress: function (NumNf, e, field, options) {
+                const masks = ['00.000.000/0000-00'];
+                const mask = (Cnpj.length > 14) ? masks[1] : masks[0];
+                $('#NumNf').mask(mask, options);
+              }
+            });
+          </script>
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
@@ -233,8 +242,14 @@
     <div class="row" id="PagBanco" style="display: none;">
       <div class="col-md-12">
         <label for="ForPagBanco" class="form-label">Banco</label>
-        <input id="ForPagBanco" type="text"
+        <input type="text" id="ForPagBanco"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+        <script type="text/javascript">
+          $("#ForPagBanco").keypress(function (event) {
+            var character = String.fromCharCode(event.keyCode);
+            return isValid(character);
+          });
+        </script>
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
@@ -244,12 +259,24 @@
         <label for="ForPagAgencia" class="form-label">Agencia</label>
         <input id="ForPagAgencia" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+          <script type="text/javascript">
+            $("#ForPagAgencia").keypress(function (event) {
+              var character = String.fromCharCode(event.keyCode);
+              return isValid(character);
+            });
+          </script>
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-6">
         <label for="ForPagConta" class="form-label">Conta</label>
         <input id="ForPagConta" type="text"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+          <script type="text/javascript">
+            $("#ForPagConta").keypress(function (event) {
+              var character = String.fromCharCode(event.keyCode);
+              return isValid(character);
+            });
+          </script>
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
@@ -691,7 +718,8 @@
     <div class="row">
       <div class="text-center">
         <button type="button" class="btn btn-outline-success" onclick="inserirLinhaTabela()">Adicionar parcela</button>
-        <button type="button" class="btn btn-outline-success" onclick="removerLinhaTabela()">Remover Última Parcela</button>
+        <button type="button" class="btn btn-outline-success" onclick="removerLinhaTabela()">Remover Última
+          Parcela</button>
       </div>
     </div>
 
