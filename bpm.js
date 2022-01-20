@@ -1,17 +1,22 @@
 function selecionaTipoFormulario() {
     if (document.getElementById("selectTipFor").value == 'Adiantamento') {
       
-        let eVal = document.getElementById('NumNf');
+        let eVal = document.getElementById('PagNumNf');
 
         eVal.style.display = 'flex';  
+
+        document.getElementById("NumNf").value = ''
     } 
     if (document.getElementById("selectTipFor").value == 'Pagamento') {
       
-        let eVal = document.getElementById('NumNf');
+        let eVal = document.getElementById('PagNumNf');
 
-        eVal.style.display = 'none';  
+        eVal.style.display = 'none'; 
+        
+        document.getElementById("NumNf").value = ''
     }   
 }
+
 
 function testefunc() {
     if (document.getElementById("VlrParDois").value != "") {
