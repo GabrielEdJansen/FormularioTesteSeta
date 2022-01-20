@@ -19,6 +19,11 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.14/iframeResizer.contentWindow.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+    crossorigin="anonymous"></script>
+
 
   <script type="text/javascript" src="jquery.maskMoney.js"></script>
   <script type="text/javascript">
@@ -86,13 +91,20 @@
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
-
       <div class="col-md-6">
-        <label for="Cnpj" class="form-label">CNPJ</label>
+        <label for="Cnpj" class="form-label">CNPJ/CPF</label>
         <input id="Cnpj" name="Cnpj" required
           class="form-control ng-scope ng-touched ng-dirty ng-empty ng-valid-mask ng-valid ng-valid-parse ng-valid-required ng-valid-pattern">
-        <script type="text/javascript">$("#Cnpj").mask("99.999.999-999");</script>
-        <div class="invalid-feedback">*Campo Obrigatório</div>
+        <script type="text/javascript">
+          $('#Cnpj').mask('000.000.000-00', {
+            onKeyPress: function (Cnpj, e, field, options) {
+              const masks = ['000.000.000-000', '00.000.000/0000-00'];
+              const mask = (Cnpj.length > 14) ? masks[1] : masks[0];
+              $('#Cnpj').mask(mask, options);
+            }
+          });
+        </script>
+        <div class="invalid-feedback">*Preencha o CPF</div>
       </div>
     </div>
     <!-- Projeto/Conta Financeira/Centro de Custo -->
@@ -788,7 +800,7 @@
           Você precisa aceitar os termos para prosseguir.
         </div>
       </div>
-    </div>
+    </div>-->
 
     <div class="row">
       <div class="col-md-6">
@@ -796,7 +808,7 @@
 
 
       </div>
-    </div>-->
+    </div>
 
   </form>
 </body>
