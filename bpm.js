@@ -848,6 +848,7 @@ function _init(data, info) {
             console.log("Carregando Dados", map);
             const nomFun = map.get("nomFun");
             const emaFun = map.get("emaFun");
+            const selectEmpFil = map.get("selectEmpFil");
             const selectTipFor = map.get("selectTipFor");
             const selectFormPag = map.get("selectFormPag");
             const DatSol = map.get("DatSol");
@@ -930,6 +931,7 @@ function _init(data, info) {
 
             document.getElementById("nomFun").setAttribute("value", nomFun);
             document.getElementById("emaFun").setAttribute("value", emaFun);
+            document.getElementById("selectEmpFil").value = selectEmpFil;
             document.getElementById("selectTipFor").value = selectTipFor;
             document.getElementById("selectFormPag").value = selectFormPag;
             document.getElementById("DatSol").setAttribute("value", DatSol);
@@ -1023,6 +1025,9 @@ function _saveData(data, info) {
     let newData = {};
     let selectForm = document.getElementById("selectTipFor");
     newData.selectTipFor = selectForm.options[selectForm.selectedIndex].value;
+
+    let selectEmp = document.getElementById("selectEmpFil");
+    newData.selectEmpFil = selectEmp.options[selectEmp.selectedIndex].value;
 
     let selectFormPagamento = document.getElementById("selectFormPag");
     newData.selectFormPag = selectFormPagamento.options[selectFormPagamento.selectedIndex].value;
@@ -1124,6 +1129,16 @@ function _rollback(data, info) {
 function isFormValid() {
     var retornaResultado = 0
     //--------------------------------------------------TIPO DA REQUISIÇÃO--------------------------------------------------
+   //Empresa/Filial
+   var isNullSelectEmpFil = document.getElementById("selectEmpFil").value;
+    if ((isNullSelectEmpFil == '') || (isNullSelectEmpFil == 'Selecione a Empresa/Filal')) {
+        document.getElementById("selectEmpFil").setAttribute("class", "form-select is-invalid");
+    }
+    if ((isNullSelectEmpFil!= '') && (isNullSelectEmpFil!= 'Selecione a Empresa/Filal')) {
+        document.getElementById("selectEmpFil").setAttribute("class", "form-select is-valid");
+        retornaResultado++
+    }
+
     //Tipo de Formulario
     var isNullSelectTipFor = document.getElementById("selectTipFor").value;
     if ((isNullSelectTipFor == '') || (isNullSelectTipFor == 'Selecione o tipo do formulário')) {
@@ -1716,9 +1731,9 @@ function isFormValid() {
     var TotalCampos = 0
     if ((document.getElementById("selectFormPag").value == 'Pix') || (document.getElementById("selectFormPag").value == 'Depósito')) {
         if (document.getElementById("selectFormPag").value == 'Depósito') {
-            TotalCampos = 14
+            TotalCampos = 15
         } else {
-            TotalCampos = 12
+            TotalCampos = 13
         }
 
         TotalCampos = TotalCampos + 3
@@ -1761,7 +1776,7 @@ function isFormValid() {
 
     if (document.getElementById("selectFormPag").value == 'Boleto') {
 
-        TotalCampos = 11
+        TotalCampos = 12
 
         TotalCampos = TotalCampos + 4
 
