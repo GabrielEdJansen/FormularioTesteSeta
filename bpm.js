@@ -1131,10 +1131,10 @@ function isFormValid() {
     //--------------------------------------------------TIPO DA REQUISIÇÃO--------------------------------------------------
    //Empresa/Filial
    var isNullSelectEmpFil = document.getElementById("selectEmpFil").value;
-    if ((isNullSelectEmpFil == '') || (isNullSelectEmpFil == 'Selecione a Empresa/Filal')) {
+    if ((isNullSelectEmpFil == '') || (isNullSelectEmpFil == 'Selecione a Empresa/Filial')) {
         document.getElementById("selectEmpFil").setAttribute("class", "form-select is-invalid");
     }
-    if ((isNullSelectEmpFil!= '') && (isNullSelectEmpFil!= 'Selecione a Empresa/Filal')) {
+    if ((isNullSelectEmpFil != '') && (isNullSelectEmpFil != 'Selecione a Empresa/Filial')) {
         document.getElementById("selectEmpFil").setAttribute("class", "form-select is-valid");
         retornaResultado++
     }
