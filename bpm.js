@@ -1213,7 +1213,7 @@ function isFormValid() {
 
     //Número da NF
     var isNullNumNf = document.getElementById("NumNf").value;
-    if (isNullNumNf == '') {
+    if ((isNullNumNf == '') && (document.getElementById("selectTipFor").value == 'Adiantamento')) {
         document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
     } else {
         document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
