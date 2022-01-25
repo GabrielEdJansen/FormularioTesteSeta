@@ -1,9 +1,9 @@
 function exibirParcelasComValorInformado() {
 
-  if (document.getElementById("VlrParDois").value > 0) {
-        let eBol2exibir = document.getElementById('parcela2');
+    if (document.getElementById("VlrParDois").value > 0) {
+        let eBol2 = document.getElementById('parcela2');
 
-        eBol2exibir.style.display = 'flex';
+        eBol2.style.display = 'flex';
 
         if (document.getElementById("selectFormPag").value == 'Boleto') {
 
