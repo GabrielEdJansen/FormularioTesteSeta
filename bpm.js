@@ -1,5 +1,5 @@
 function exibirParcelasComValorInformado() {
-alert(document.getElementById("VlrParDois").value)
+
     if (document.getElementById("VlrParDois").value != 0) {
         let eBol2 = document.getElementById('parcela2');
 
@@ -1250,12 +1250,11 @@ function _saveData(data, info) {
     newData.ForPagConta = document.getElementById("ForPagConta").value;
     newData.ForPagChavePix = document.getElementById("ForPagChavePix").value;
 
-    exibirParcelasComValorInformado()
-
     console.log(newData);
     return {
         formData: newData,
     };
+    exibirParcelasComValorInformado()
 }
 
 function _rollback(data, info) {
