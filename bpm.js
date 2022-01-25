@@ -1,6 +1,6 @@
 function exibirParcelasComValorInformado() {
 
-    if (document.getElementById("VlrParDois").value > 0) {
+    if (document.getElementById("VlrParDois").value =! "0") {
         let eBol2 = document.getElementById('parcela2');
 
         eBol2.style.display = 'flex';
