@@ -1,5 +1,5 @@
 function exibirParcelasComValorInformado() {
-
+alert(document.getElementById("VlrParDois").value)
     if (document.getElementById("VlrParDois").value != 0) {
         let eBol2 = document.getElementById('parcela2');
 
