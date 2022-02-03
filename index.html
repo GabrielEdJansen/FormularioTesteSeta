@@ -387,11 +387,21 @@
     </div>
     <!-- Chave PIX -->
     <div class="row" id="PagPix" style="display: none;">
+      <div class="col-md-4">
+        <label required for="selectTipPix" class="form-label">Tipo de Chave Pix</label>
+        <select name="select" id="selectTipPix" class="form-select" onchange="onSelectFormPagLimp()" aria-label="Default select example">
+          <option selected>Selecione o Tipo de Chave Pix</option>
+          <option id="TipPixTel" value="1">Telefone</option>
+          <option id="TipPixEmail" value="2">E-mail</option>
+          <option id="TipPixCpfCnpj" value="3">CPF/CNPJ</option>
+          <option id="TipPixAle" value="4">Chave Aleatória</option>
+        </select>
+        <div class="invalid-feedback">*Campo Obrigatório</div>
+      </div>
       <div class="col-md-6">
         <label for="ForPagChavePix" class="form-label">Chave PIX</label>
-        <input id="ForPagChavePix" type="text"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-        <div class="invalid-feedback">*Campo Obrigatório</div>
+        <input  type="text" id="ForPagChavePix" class="form-control" onchange="onSelectFormPag(ForPagChavePix)" data-contato disabled>
+        <div class="invalid-feedback">*Campo Obrigatório ou chave informada inválida</div>
       </div>
     </div>
     <!---------------------------------------------------------------------------------------------------->
