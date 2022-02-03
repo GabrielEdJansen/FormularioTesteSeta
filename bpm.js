@@ -1,3 +1,119 @@
+function onSelectFormPagLimp() {
+    document.getElementById("ForPagChavePix").value = null
+    $("#ForPagChavePix").unmask();
+    //document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+
+    var input = $("#ForPagChavePix");
+    input.attr("disabled", false);
+}
+
+function onSelectFormPag(field) {
+
+    if (document.getElementById("selectFormPag").value == 'Pix') {
+
+        if (document.getElementById("selectTipPix").value == 'E-mail') {
+            $("#ForPagChavePix").unmask();
+            usuario = field.value.substring(0, field.value.indexOf("@"));
+            dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
+
+            if ((usuario.length >= 1) &&
+                (dominio.length >= 3) &&
+                (usuario.search("@") == -1) &&
+                (dominio.search("@") == -1) &&
+                (usuario.search(" ") == -1) &&
+                (dominio.search(" ") == -1) &&
+                (dominio.search(".") != -1) &&
+                (dominio.indexOf(".") >= 1) &&
+                (dominio.lastIndexOf(".") < dominio.length - 1)) {
+
+                document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            }
+            else {
+                document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            }
+        }
+        if (document.getElementById("selectTipPix").value == 'Telefone') {
+            $("#ForPagChavePix").unmask();
+            if ($('#ForPagChavePix').val().length <= 10) {
+                $('#ForPagChavePix').mask("(99) 9999-9999");
+                document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            } else {
+                $('#ForPagChavePix').mask("(99)9 9999-9999");
+                document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            }
+
+            if ($('#ForPagChavePix').val().length < 14) {
+                document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            }
+
+        }
+
+        if (document.getElementById("selectTipPix").value == 'CPF/CNPJ') {
+            var vlrCha = $('#ForPagChavePix').val()
+
+            const masks = ['000.000.000-000', '00.000.000/0000-00'];
+            if (vlrCha.length > 14) {
+                $('#ForPagChavePix').mask(masks[1]);
+            } else {
+                $('#ForPagChavePix').mask(masks[0]);
+            }
+
+            /*if (($('#ForPagChavePix').val().length < 14) || (('#ForPagChavePix').val().length > 14) ('#ForPagChavePix').val().length < 17) {
+                document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+            }*/
+        }
+    }
+
+}
+
+function validacaoPix(field) {
+    /* if (document.getElementById("selectFormPag").value == 'Pix') {
+ 
+         if (document.getElementById("selectTipPix").value == 'E-mail') {
+             usuario = field.value.substring(0, field.value.indexOf("@"));
+             dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
+ 
+             if ((usuario.length >= 1) &&
+                 (dominio.length >= 3) &&
+                 (usuario.search("@") == -1) &&
+                 (dominio.search("@") == -1) &&
+                 (usuario.search(" ") == -1) &&
+                 (dominio.search(" ") == -1) &&
+                 (dominio.search(".") != -1) &&
+                 (dominio.indexOf(".") >= 1) &&
+                 (dominio.lastIndexOf(".") < dominio.length - 1)) {
+ 
+                 document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+             }
+             else {
+                 document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+             }
+         }
+ 
+         if (document.getElementById("selectTipPix").value == 'Telefone') {
+ 
+             $("#ForPagChavePix").mask("(99)9 9999-9999");
+             $("#ForPagChavePix").on('change', function () {
+                 if ($('#ForPagChavePix').val().length <= 14) {
+                     $('#ForPagChavePix').mask("(99) 9999-9999");
+                 } else {
+                     $('#ForPagChavePix').mask("(99)9 9999-9999");
+                 }
+             });
+         }
+ 
+         if (document.getElementById("selectTipPix").value == 'CPF/CNPJ') {
+             $('#ForPagChavePix').mask('000.000.000-00', {
+                 function (ForPagChavePix, e, field, options) {
+                   const masks = ['000.000.000-000', '00.000.000/0000-00'];
+                   const mask = (ForPagChavePix.length > 14) ? masks[1] : masks[0];
+                   $('#ForPagChavePix').mask(mask, options);
+                 }
+               });
+         }
+     }*/
+}
+
 function exibirParcelasComValorInformado() {
 
     if (document.getElementById("VlrParDois").value != "0") {
@@ -989,6 +1105,7 @@ function _init(data, info) {
             const selectEmpFil = map.get("selectEmpFil");
             const selectTipFor = map.get("selectTipFor");
             const selectFormPag = map.get("selectFormPag");
+            const selectTipPix = map.get("selectTipPix");
             const DatSol = map.get("DatSol");
             const Fornec = map.get("Fornec");
             const Cnpj = map.get("Cnpj");
@@ -1072,6 +1189,7 @@ function _init(data, info) {
             document.getElementById("selectEmpFil").value = selectEmpFil;
             document.getElementById("selectTipFor").value = selectTipFor;
             document.getElementById("selectFormPag").value = selectFormPag;
+            document.getElementById("selectTipPix").value = selectTipPix;
             document.getElementById("DatSol").setAttribute("value", DatSol);
             document.getElementById("Fornec").setAttribute("value", Fornec);
             document.getElementById("Cnpj").setAttribute("value", Cnpj);
@@ -1172,6 +1290,9 @@ function _saveData(data, info) {
     let selectFormPagamento = document.getElementById("selectFormPag");
     newData.selectFormPag = selectFormPagamento.options[selectFormPagamento.selectedIndex].value;
 
+    let selectTipoPix= document.getElementById("selectTipPix");
+    newData.selectFormPag = selectTipoPix.options[selectTipoPix.selectedIndex].value;
+
     newData.DatSol = document.getElementById("DatSol").value;
     newData.Fornec = document.getElementById("Fornec").value;
     newData.Cnpj = document.getElementById("Cnpj").value;
@@ -1252,13 +1373,13 @@ function _saveData(data, info) {
     newData.ForPagConta = document.getElementById("ForPagConta").value;
     newData.ForPagChavePix = document.getElementById("ForPagChavePix").value;
 
-    
+
 
     console.log(newData);
     return {
         formData: newData,
     };
-    
+
 }
 
 function _rollback(data, info) {
@@ -1272,8 +1393,8 @@ function _rollback(data, info) {
 function isFormValid() {
     var retornaResultado = 0
     //--------------------------------------------------TIPO DA REQUISIÇÃO--------------------------------------------------
-   //Empresa/Filial
-   var isNullSelectEmpFil = document.getElementById("selectEmpFil").value;
+    //Empresa/Filial
+    var isNullSelectEmpFil = document.getElementById("selectEmpFil").value;
     if ((isNullSelectEmpFil == '') || (isNullSelectEmpFil == 'Selecione a Empresa/Filial')) {
         document.getElementById("selectEmpFil").setAttribute("class", "form-select is-invalid");
     }
