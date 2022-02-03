@@ -1,18 +1,23 @@
 function onSelectFormPagLimp() {
     document.getElementById("ForPagChavePix").value = null
     $("#ForPagChavePix").unmask();
-    //document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+    document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
 
     var input = $("#ForPagChavePix");
     input.attr("disabled", false);
+
+    if (document.getElementById("selectTipPix").value == 'Selecione o Tipo de Chave Pix') {
+        var input = $("#ForPagChavePix");
+        input.attr("disabled", true);
+    }
 }
 
 function onSelectFormPag(field) {
 
     if (document.getElementById("selectFormPag").value == 'Pix') {
 
-        if (document.getElementById("selectTipPix").value == 'E-mail') {
-            $("#ForPagChavePix").unmask();
+        if (document.getElementById("selectTipPix").value == 2) {
+
             usuario = field.value.substring(0, field.value.indexOf("@"));
             dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
 
@@ -32,7 +37,7 @@ function onSelectFormPag(field) {
                 document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
             }
         }
-        if (document.getElementById("selectTipPix").value == 'Telefone') {
+        if (document.getElementById("selectTipPix").value == 1) {
             $("#ForPagChavePix").unmask();
             if ($('#ForPagChavePix').val().length <= 10) {
                 $('#ForPagChavePix').mask("(99) 9999-9999");
@@ -48,7 +53,7 @@ function onSelectFormPag(field) {
 
         }
 
-        if (document.getElementById("selectTipPix").value == 'CPF/CNPJ') {
+        if (document.getElementById("selectTipPix").value == 3) {
             var vlrCha = $('#ForPagChavePix').val()
 
             const masks = ['000.000.000-000', '00.000.000/0000-00'];
@@ -57,10 +62,14 @@ function onSelectFormPag(field) {
             } else {
                 $('#ForPagChavePix').mask(masks[0]);
             }
+        }
 
-            /*if (($('#ForPagChavePix').val().length < 14) || (('#ForPagChavePix').val().length > 14) ('#ForPagChavePix').val().length < 17) {
+        if (document.getElementById("selectTipPix").value == 4) {
+            if (document.getElementById("ForPagChavePix").value != '') {
+                document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+            } else {
                 document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-            }*/
+            }
         }
     }
 
@@ -1290,7 +1299,7 @@ function _saveData(data, info) {
     let selectFormPagamento = document.getElementById("selectFormPag");
     newData.selectFormPag = selectFormPagamento.options[selectFormPagamento.selectedIndex].value;
 
-    let selectTipoPix= document.getElementById("selectTipPix");
+    let selectTipoPix = document.getElementById("selectTipPix");
     newData.selectFormPag = selectTipoPix.options[selectTipoPix.selectedIndex].value;
 
     newData.DatSol = document.getElementById("DatSol").value;
