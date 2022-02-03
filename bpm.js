@@ -1300,7 +1300,7 @@ function _saveData(data, info) {
     newData.selectFormPag = selectFormPagamento.options[selectFormPagamento.selectedIndex].value;
 
     let selectTipoPix = document.getElementById("selectTipPix");
-    newData.selectFormPag = selectTipoPix.options[selectTipoPix.selectedIndex].value;
+    newData.selectTipPix = selectTipoPix.options[selectTipoPix.selectedIndex].value;
 
     newData.DatSol = document.getElementById("DatSol").value;
     newData.Fornec = document.getElementById("Fornec").value;
