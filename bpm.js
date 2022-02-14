@@ -718,7 +718,7 @@ function ExibirFormaPagamento() {
         eBol12.style.display = 'none';
 
     }
-    if (document.getElementById("selectFormPag").value == 'Depósito') {
+    if (document.getElementById("selectFormPag").value == 'Deposito') {
 
         document.getElementById("CodBolUm").value = ''
         document.getElementById("CodBolDois").value = ''
@@ -1544,7 +1544,7 @@ function isFormValid() {
         }
     }
 
-    if (document.getElementById("selectFormPag").value == 'Depósito') {
+    if (document.getElementById("selectFormPag").value == 'Deposito') {
 
         document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
         document.getElementById("CodBolUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
@@ -2002,8 +2002,8 @@ function isFormValid() {
 
     //--------------------------------------------------RETORNO FUNÇÃO--------------------------------------------------  
     var TotalCampos = 0
-    if ((document.getElementById("selectFormPag").value == 'Pix') || (document.getElementById("selectFormPag").value == 'Depósito')) {
-        if (document.getElementById("selectFormPag").value == 'Depósito') {
+    if ((document.getElementById("selectFormPag").value == 'Pix') || (document.getElementById("selectFormPag").value == 'Deposito')) {
+        if (document.getElementById("selectFormPag").value == 'Deposito') {
             TotalCampos = 15
         } else {
             TotalCampos = 13
