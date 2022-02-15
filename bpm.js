@@ -2003,7 +2003,6 @@ function isFormValid() {
             TotalCampos = 12
         }
         
-        alert(TotalCampos)
 
         TotalCampos = TotalCampos + 3
 
@@ -2085,6 +2084,8 @@ function isFormValid() {
 
     }
 
+    alert(TotalCampos)
+    alert(retornaResultado)
     if (TotalCampos == retornaResultado) {
         return true
     }
