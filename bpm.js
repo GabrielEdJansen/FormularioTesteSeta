@@ -1121,7 +1121,6 @@ function _init(data, info) {
             const Proj = map.get("Proj");
             const ConFin = map.get("ConFin");
             const CenCus = map.get("CenCus");
-            const DatPag = map.get("DatPag");
             const NumNf = map.get("NumNf");
             const DatPre = map.get("DatPre");
             const ObsPag = map.get("ObsPag");
@@ -1205,7 +1204,6 @@ function _init(data, info) {
             document.getElementById("Proj").setAttribute("value", Proj);
             document.getElementById("ConFin").setAttribute("value", ConFin);
             document.getElementById("CenCus").setAttribute("value", CenCus);
-            document.getElementById("DatPag").setAttribute("value", DatPag);
             document.getElementById("NumNf").setAttribute("value", NumNf);
             document.getElementById("DatPre").setAttribute("value", DatPre);
             document.getElementById("ObsPag").setAttribute("value", ObsPag);
@@ -1308,7 +1306,6 @@ function _saveData(data, info) {
     newData.Proj = document.getElementById("Proj").value;
     newData.ConFin = document.getElementById("ConFin").value;
     newData.CenCus = document.getElementById("CenCus").value;
-    newData.DatPag = document.getElementById("DatPag").value;
     newData.NumNf = document.getElementById("NumNf").value;
     newData.DatPre = document.getElementById("DatPre").value;
     newData.ObsPag = document.getElementById("ObsPag").value;
@@ -1476,14 +1473,6 @@ function isFormValid() {
     }
 
     //--------------------------------------------------DADOS PAGAMENTO--------------------------------------------------
-    //Data Pagamento
-    var isNullDatPag = document.getElementById("DatPag").value;
-    if (isNullDatPag == '') {
-        document.getElementById("DatPag").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
-    } else {
-        document.getElementById("DatPag").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
-    }
-
     //Número da NF
     var isNullNumNf = document.getElementById("NumNf").value;
     if ((isNullNumNf == '') && (document.getElementById("selectTipFor").value == 'Adiantamento')) {
@@ -2004,9 +1993,9 @@ function isFormValid() {
     var TotalCampos = 0
     if ((document.getElementById("selectFormPag").value == 'Pix') || (document.getElementById("selectFormPag").value == 'Deposito')) {
         if (document.getElementById("selectFormPag").value == 'Deposito') {
-            TotalCampos = 15
+            TotalCampos = 14
         } else {
-            TotalCampos = 13
+            TotalCampos = 12
         }
 
         TotalCampos = TotalCampos + 3
