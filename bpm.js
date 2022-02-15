@@ -1,3 +1,111 @@
+function preencheCnpjEmp(){
+   
+    var CodEmp = document.getElementById("selectEmpFil").value
+
+    if(CodEmp == "1-1"){
+        document.getElementById("cnpjEmp").value = "76.359.785/0001-55"
+    }
+    if(CodEmp == "2-1"){
+        document.getElementById("cnpjEmp").value = "05.637.333/0001-40"
+    }
+    if(CodEmp == "3-1"){
+        document.getElementById("cnpjEmp").value = "08.089.186/0001-09"
+    }
+    if(CodEmp == "4-4"){
+        document.getElementById("cnpjEmp").value = "92.094.424/0001-80"
+    }
+    if(CodEmp == "5-1"){
+        document.getElementById("cnpjEmp").value = "19.962.335/0001-19"
+    }
+    if(CodEmp == "6-1"){
+        document.getElementById("cnpjEmp").value = "19.962.348/0001-98"
+    }
+    if(CodEmp == "7-1"){
+        document.getElementById("cnpjEmp").value = "21.536.523/0001-27"
+    }
+    if(CodEmp == "8-1"){
+        document.getElementById("cnpjEmp").value = "24.353.603/0001-35"
+    }
+    if(CodEmp == "9-1"){
+        document.getElementById("cnpjEmp").value = "24.303.280/0001-75"
+    }
+    if(CodEmp == "10-1"){
+        document.getElementById("cnpjEmp").value = "24.303.280/0001-75"
+    }
+    if(CodEmp == "11-1"){
+        document.getElementById("cnpjEmp").value = "24.332.817/0001-25"
+    }
+    if(CodEmp == "12-1"){
+        document.getElementById("cnpjEmp").value = "24.303.326/0001-56"
+    }
+    if(CodEmp == "13-1"){
+        document.getElementById("cnpjEmp").value = "24.636.349/0001-82"
+    }
+    if(CodEmp == "14-1"){
+        document.getElementById("cnpjEmp").value = "26.932.581/0001-93"
+    }
+    if(CodEmp == "15-1"){
+        document.getElementById("cnpjEmp").value = "27.550.317/0001-58"
+    }
+    if(CodEmp == "16-1"){
+        document.getElementById("cnpjEmp").value = "28.507.748/0001-02"
+    }
+    if(CodEmp == "17-1"){
+        document.getElementById("cnpjEmp").value = "31.180.350/0001-00"
+    }
+    if(CodEmp == "18-1"){
+        document.getElementById("cnpjEmp").value = "30.953.781/0001-08"
+    }
+    if(CodEmp == "19-1"){
+        document.getElementById("cnpjEmp").value = "32.059.213/0001-85"
+    }
+    if(CodEmp == "20-1"){
+        document.getElementById("cnpjEmp").value = "33.864.175/0001-04"
+    }
+    if(CodEmp == "21-1"){
+        document.getElementById("cnpjEmp").value = "34.251.859/0001-95"
+    }
+    if(CodEmp == "22-1"){
+        document.getElementById("cnpjEmp").value = "34.914.501/0001-03"
+    }
+    if(CodEmp == "23-1"){
+        document.getElementById("cnpjEmp").value = "36.087.985/0001-81"
+    }
+    if(CodEmp == "24-1"){
+        document.getElementById("cnpjEmp").value = "36.089.488/0001-12"
+    }
+    if(CodEmp == "25-1"){
+        document.getElementById("cnpjEmp").value = "35.693.154/0001-90"
+    }
+    if(CodEmp == "26-1"){
+        document.getElementById("cnpjEmp").value = "36.875.400/0001-98"
+    }
+    if(CodEmp == "27-1"){
+        document.getElementById("cnpjEmp").value = "39.463.058/0001-07"
+    }
+    if(CodEmp == "28-1"){
+        document.getElementById("cnpjEmp").value = "35.591.186/0001-85"
+    }
+    if(CodEmp == "29-1"){
+        document.getElementById("cnpjEmp").value = "40.212.095/0001-21"
+    }
+    if(CodEmp == "30-1"){
+        document.getElementById("cnpjEmp").value = "40.709.154/0001-71"
+    }
+    if(CodEmp == "31-1"){
+        document.getElementById("cnpjEmp").value = "40.955.615/0001-96"
+    }
+    if(CodEmp == "32-1"){
+        document.getElementById("cnpjEmp").value = "00.000.000/0000-00"
+    }
+    if(CodEmp == "33-1"){
+        document.getElementById("cnpjEmp").value = "00.000.000/0000-00"
+    }
+    if(CodEmp == "34-1"){
+        document.getElementById("cnpjEmp").value = "44.700.480/0001-79"
+    }
+}
+
 function onSelectFormPagLimp() {
     document.getElementById("ForPagChavePix").value = null
     $("#ForPagChavePix").unmask();
@@ -1204,7 +1312,7 @@ function _init(data, info) {
             document.getElementById("Proj").setAttribute("value", Proj);
             document.getElementById("ConFin").setAttribute("value", ConFin);
             document.getElementById("CenCus").setAttribute("value", CenCus);
-            document.getElementById("NumNf").setAttribute("value", NumNf);
+            document.getElementById("NumNf").value = NumNf;
             document.getElementById("DatPre").setAttribute("value", DatPre);
             document.getElementById("ObsPag").setAttribute("value", ObsPag);
 
@@ -1306,7 +1414,10 @@ function _saveData(data, info) {
     newData.Proj = document.getElementById("Proj").value;
     newData.ConFin = document.getElementById("ConFin").value;
     newData.CenCus = document.getElementById("CenCus").value;
-    newData.NumNf = document.getElementById("NumNf").value;
+
+    let selectNumNf = document.getElementById("NumNf");
+    newData.NumNf = selectNumNf.options[selectNumNf.selectedIndex].value;
+
     newData.DatPre = document.getElementById("DatPre").value;
     newData.ObsPag = document.getElementById("ObsPag").value;
 
@@ -1475,9 +1586,10 @@ function isFormValid() {
     //--------------------------------------------------DADOS PAGAMENTO--------------------------------------------------
     //Número da NF
     var isNullNumNf = document.getElementById("NumNf").value;
-    if (isNullNumNf == '') {
+    var isNullCnpjEmp = document.getElementById("cnpjEmp").value;
+    if ((isNullNumNf == '') || (isNullSelectTipFor == 'Selecione o CNPJ do Tomador') || (isNullCnpjEmp != isNullNumNf)) {
         document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
-    } else {
+    } if((isNullNumNf != '') && (isNullSelectTipFor != 'Selecione o CNPJ do Tomador')) {
         document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
         retornaResultado++
     }
