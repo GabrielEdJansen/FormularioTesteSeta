@@ -2002,6 +2002,8 @@ function isFormValid() {
         } else {
             TotalCampos = 12
         }
+        
+        alert(TotalCampos)
 
         TotalCampos = TotalCampos + 3
 
