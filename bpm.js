@@ -1589,7 +1589,7 @@ function isFormValid() {
     var isNullCnpjEmp = document.getElementById("cnpjEmp").value;
     if ((isNullNumNf == '') || (isNullSelectTipFor == 'Selecione o CNPJ do Tomador') || (isNullCnpjEmp != isNullNumNf)) {
         document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
-    } if((isNullNumNf != '') && (isNullSelectTipFor != 'Selecione o CNPJ do Tomador')) {
+    } if((isNullNumNf != '') && (isNullSelectTipFor != 'Selecione o CNPJ do Tomador') && (isNullCnpjEmp == isNullNumNf)) {
         document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
         retornaResultado++
     }
