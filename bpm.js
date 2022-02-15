@@ -248,7 +248,12 @@ function exibirParcelasComValorInformado() {
     }
 
     if (document.getElementById("VlrParDoze").value != "0") {
-        let eBol12 = document.getElementById('parcela12');
+        let eBol
+        
+        
+        
+        
+        = document.getElementById('parcela12');
 
         eBol12.style.display = 'flex';
 
@@ -2038,7 +2043,7 @@ function isFormValid() {
 
     if (document.getElementById("selectFormPag").value == 'Boleto') {
 
-        TotalCampos = 12
+        TotalCampos = 11
 
         TotalCampos = TotalCampos + 4
 
