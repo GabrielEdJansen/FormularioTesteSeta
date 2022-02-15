@@ -1998,10 +1998,6 @@ function isFormValid() {
             TotalCampos = 13
         }
 
-        if(document.getElementById("selectTipFor").value == 'Pagamento'){
-            TotalCampos--;   
-        }
-
         TotalCampos = TotalCampos + 3
 
         if (document.getElementById("VlrParDois").value != 0) {
@@ -2043,11 +2039,6 @@ function isFormValid() {
     if (document.getElementById("selectFormPag").value == 'Boleto') {
 
         TotalCampos = 12
-
-        
-        if(document.getElementById("selectTipFor").value == 'Pagamento'){
-            TotalCampos--;   
-        }
 
         TotalCampos = TotalCampos + 4
 
