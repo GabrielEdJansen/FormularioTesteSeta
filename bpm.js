@@ -1494,6 +1494,8 @@ function _saveData(data, info) {
 
     if (CheckInserirChavePix == true) {
         newData.inserirChaPix = "S";
+    }else{
+        newData.inserirChaPix = "N";
     }
 
     console.log(newData);
