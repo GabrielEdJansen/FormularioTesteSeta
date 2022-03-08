@@ -117,9 +117,9 @@
     <!-- Fornecedor/CNPJ -->
     <div class="row">
       <div class="col-md-6">
-        <label for="Fornec" class="form-label">Fornecedor</label>
+        <label for="Fornec" class="form-label">Código do Fornecedor</label>
         <input required id="Fornec" type="text" required
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
+          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required" onkeypress="return onlynumber();">
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-6">
