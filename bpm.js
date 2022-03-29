@@ -1714,7 +1714,7 @@ function isFormValid() {
         if ((isNullFormPagTipTcc == '') || (isNullFormPagTipTcc == 'Selecione o Tipo de Conta')) {
             document.getElementById("FormPagTipTcc").setAttribute("class", "form-select is-invalid");
         }
-        if ((isNullSelectFormPag != '') && (isNullSelectFormPag != 'Selecione o Tipo de Conta')) {
+        if ((isNullFormPagTipTcc != '') && (isNullFormPagTipTcc != 'Selecione o Tipo de Conta')) {
             document.getElementById("FormPagTipTcc").setAttribute("class", "form-select is-valid");
             retornaResultado++
         }
