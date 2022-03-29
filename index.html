@@ -119,7 +119,7 @@
       <div class="col-md-6">
         <label for="Fornec" class="form-label">Código do Fornecedor</label>
         <input required id="Fornec" type="text" required
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required" onkeypress="return onlynumber();">
+          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required" onkeypress="onlynumber();">
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
       <div class="col-md-6">
@@ -267,9 +267,27 @@
         <div class="invalid-feedback">*Campo Obrigatório</div>
       </div>
     </div>
-    <!-- Banco -->
+    <!-- Tipo de Conta -->
     <div class="row" id="PagBanco" style="display: none;">
-      <div class="col-md-12">
+      <div class="col-md-6">
+      <label required for="FormPagTipTcc" class="form-label">Tipo de Conta</label>
+      <select name="select" id="FormPagTipTcc" class="form-select" aria-label="Default select example">
+        <option selected>Selecione o Tipo de Conta</option>
+        <option value="1">Conta Corrente</option>
+        <option value="2">Conta Poupança</option>
+        <option value="3">Conta Investimento</option>
+        <option value="4">Conta Aplicação Financeira</option>
+        <option value="5">Conta Empréstimo</option>
+        <option value="6">Cota Capital</option>
+        <option value="7">Conta de Retenção</option>
+        <option value="8">Conta da Loja</option>
+        <option value="9">Conta Salário</option>
+        <option value="10">Outros</option>
+      </select>
+      <div class="invalid-feedback">*Campo Obrigatório</div>
+    </div>
+    <!-- Banco -->
+      <div class="col-md-6">
         <label for="ForPagBanco" class="form-label">Banco</label>
         <input type="text" id="ForPagBanco"
           class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
