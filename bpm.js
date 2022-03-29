@@ -1,119 +1,119 @@
 function onlynumber(evt) {
     var theEvent = evt || window.event;
     var key = theEvent.keyCode || theEvent.which;
-    key = String.fromCharCode( key );
+    key = String.fromCharCode(key);
     //var regex = /^[0-9.,]+$/;
     var regex = /^[0-9.]+$/;
-    if( !regex.test(key) ) {
-       theEvent.returnValue = false;
-       if(theEvent.preventDefault) theEvent.preventDefault();
+    if (!regex.test(key)) {
+        theEvent.returnValue = false;
+        if (theEvent.preventDefault) theEvent.preventDefault();
     }
- }
+}
 
-function preencheCnpjEmp(){
-   
+function preencheCnpjEmp() {
+
     var CodEmp = document.getElementById("selectEmpFil").value
 
-    if(CodEmp == "1-1"){
+    if (CodEmp == "1-1") {
         document.getElementById("cnpjEmp").value = "76.359.785/0001-55"
     }
-    if(CodEmp == "2-1"){
+    if (CodEmp == "2-1") {
         document.getElementById("cnpjEmp").value = "05.637.333/0001-40"
     }
-    if(CodEmp == "3-1"){
+    if (CodEmp == "3-1") {
         document.getElementById("cnpjEmp").value = "08.089.186/0001-09"
     }
-    if(CodEmp == "4-4"){
+    if (CodEmp == "4-4") {
         document.getElementById("cnpjEmp").value = "92.094.424/0001-80"
     }
-    if(CodEmp == "5-1"){
+    if (CodEmp == "5-1") {
         document.getElementById("cnpjEmp").value = "19.962.335/0001-19"
     }
-    if(CodEmp == "6-1"){
+    if (CodEmp == "6-1") {
         document.getElementById("cnpjEmp").value = "19.962.348/0001-98"
     }
-    if(CodEmp == "7-1"){
+    if (CodEmp == "7-1") {
         document.getElementById("cnpjEmp").value = "21.536.523/0001-27"
     }
-    if(CodEmp == "8-1"){
+    if (CodEmp == "8-1") {
         document.getElementById("cnpjEmp").value = "24.353.603/0001-35"
     }
-    if(CodEmp == "9-1"){
+    if (CodEmp == "9-1") {
         document.getElementById("cnpjEmp").value = "24.303.280/0001-75"
     }
-    if(CodEmp == "10-1"){
+    if (CodEmp == "10-1") {
         document.getElementById("cnpjEmp").value = "24.303.280/0001-75"
     }
-    if(CodEmp == "11-1"){
+    if (CodEmp == "11-1") {
         document.getElementById("cnpjEmp").value = "24.332.817/0001-25"
     }
-    if(CodEmp == "12-1"){
+    if (CodEmp == "12-1") {
         document.getElementById("cnpjEmp").value = "24.303.326/0001-56"
     }
-    if(CodEmp == "13-1"){
+    if (CodEmp == "13-1") {
         document.getElementById("cnpjEmp").value = "24.636.349/0001-82"
     }
-    if(CodEmp == "14-1"){
+    if (CodEmp == "14-1") {
         document.getElementById("cnpjEmp").value = "26.932.581/0001-93"
     }
-    if(CodEmp == "15-1"){
+    if (CodEmp == "15-1") {
         document.getElementById("cnpjEmp").value = "27.550.317/0001-58"
     }
-    if(CodEmp == "16-1"){
+    if (CodEmp == "16-1") {
         document.getElementById("cnpjEmp").value = "28.507.748/0001-02"
     }
-    if(CodEmp == "17-1"){
+    if (CodEmp == "17-1") {
         document.getElementById("cnpjEmp").value = "31.180.350/0001-00"
     }
-    if(CodEmp == "18-1"){
+    if (CodEmp == "18-1") {
         document.getElementById("cnpjEmp").value = "30.953.781/0001-08"
     }
-    if(CodEmp == "19-1"){
+    if (CodEmp == "19-1") {
         document.getElementById("cnpjEmp").value = "32.059.213/0001-85"
     }
-    if(CodEmp == "20-1"){
+    if (CodEmp == "20-1") {
         document.getElementById("cnpjEmp").value = "33.864.175/0001-04"
     }
-    if(CodEmp == "21-1"){
+    if (CodEmp == "21-1") {
         document.getElementById("cnpjEmp").value = "34.251.859/0001-95"
     }
-    if(CodEmp == "22-1"){
+    if (CodEmp == "22-1") {
         document.getElementById("cnpjEmp").value = "34.914.501/0001-03"
     }
-    if(CodEmp == "23-1"){
+    if (CodEmp == "23-1") {
         document.getElementById("cnpjEmp").value = "36.087.985/0001-81"
     }
-    if(CodEmp == "24-1"){
+    if (CodEmp == "24-1") {
         document.getElementById("cnpjEmp").value = "36.089.488/0001-12"
     }
-    if(CodEmp == "25-1"){
+    if (CodEmp == "25-1") {
         document.getElementById("cnpjEmp").value = "35.693.154/0001-90"
     }
-    if(CodEmp == "26-1"){
+    if (CodEmp == "26-1") {
         document.getElementById("cnpjEmp").value = "36.875.400/0001-98"
     }
-    if(CodEmp == "27-1"){
+    if (CodEmp == "27-1") {
         document.getElementById("cnpjEmp").value = "39.463.058/0001-07"
     }
-    if(CodEmp == "28-1"){
+    if (CodEmp == "28-1") {
         document.getElementById("cnpjEmp").value = "35.591.186/0001-85"
     }
-    if(CodEmp == "29-1"){
+    if (CodEmp == "29-1") {
         document.getElementById("cnpjEmp").value = "40.212.095/0001-21"
     }
-    if(CodEmp == "30-1"){
+    if (CodEmp == "30-1") {
         document.getElementById("cnpjEmp").value = "40.709.154/0001-71"
     }
-    if(CodEmp == "31-1"){
+    if (CodEmp == "31-1") {
         document.getElementById("cnpjEmp").value = "40.955.615/0001-96"
     }
-    if(CodEmp == "32-1"){
+    if (CodEmp == "32-1") {
         document.getElementById("cnpjEmp").value = "00.000.000/0000-00"
     }
-    if(CodEmp == "33-1"){
+    if (CodEmp == "33-1") {
         document.getElementById("cnpjEmp").value = "00.000.000/0000-00"
     }
-    if(CodEmp == "34-1"){
+    if (CodEmp == "34-1") {
         document.getElementById("cnpjEmp").value = "44.700.480/0001-79"
     }
 }
@@ -1234,6 +1234,7 @@ function _init(data, info) {
             const selectEmpFil = map.get("selectEmpFil");
             const selectTipFor = map.get("selectTipFor");
             const selectFormPag = map.get("selectFormPag");
+            const FormPagTipTcc = map.get("FormPagTipTcc");
             const selectTipPix = map.get("selectTipPix");
             const DatSol = map.get("DatSol");
             const Fornec = map.get("Fornec");
@@ -1317,6 +1318,7 @@ function _init(data, info) {
             document.getElementById("selectEmpFil").value = selectEmpFil;
             document.getElementById("selectTipFor").value = selectTipFor;
             document.getElementById("selectFormPag").value = selectFormPag;
+            document.getElementById("FormPagTipTcc").value = FormPagTipTcc;
             document.getElementById("selectTipPix").value = selectTipPix;
             document.getElementById("DatSol").setAttribute("value", DatSol);
             document.getElementById("Fornec").setAttribute("value", Fornec);
@@ -1417,6 +1419,9 @@ function _saveData(data, info) {
     let selectFormPagamento = document.getElementById("selectFormPag");
     newData.selectFormPag = selectFormPagamento.options[selectFormPagamento.selectedIndex].value;
 
+    let FormPagTipConta = document.getElementById("FormPagTipTcc");
+    newData.FormPagTipTcc = FormPagTipConta.options[FormPagTipConta.selectedIndex].value;
+
     let selectTipoPix = document.getElementById("selectTipPix");
     newData.selectTipPix = selectTipoPix.options[selectTipoPix.selectedIndex].value;
 
@@ -1506,7 +1511,7 @@ function _saveData(data, info) {
 
     if (CheckInserirChavePix == true) {
         newData.inserirChaPix = "S";
-    }else{
+    } else {
         newData.inserirChaPix = "N";
     }
 
@@ -1607,7 +1612,7 @@ function isFormValid() {
     var isNullCnpjEmp = document.getElementById("cnpjEmp").value;
     if ((isNullNumNf == '') || (isNullSelectTipFor == 'Selecione o CNPJ do Tomador') || (isNullCnpjEmp != isNullNumNf)) {
         document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-invalid");
-    } if((isNullNumNf != '') && (isNullSelectTipFor != 'Selecione o CNPJ do Tomador') && (isNullCnpjEmp == isNullNumNf)) {
+    } if ((isNullNumNf != '') && (isNullSelectTipFor != 'Selecione o CNPJ do Tomador') && (isNullCnpjEmp == isNullNumNf)) {
         document.getElementById("NumNf").setAttribute("class", "form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-valid-pattern ng-valid-mask ng-valid ng-valid-required ng-valid-date is-valid");
         retornaResultado++
     }
@@ -1635,6 +1640,8 @@ function isFormValid() {
         document.getElementById("selectFormPag").setAttribute("class", "form-select is-valid");
         retornaResultado++
     }
+
+
 
     if (document.getElementById("selectFormPag").value == 'Pix') {
 
@@ -1702,6 +1709,16 @@ function isFormValid() {
             document.getElementById("ForPagConta").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
             retornaResultado++
         }
+        //Tipo de conta
+        var isNullFormPagTipTcc = document.getElementById("FormPagTipTcc").value;
+        if ((isNullFormPagTipTcc == '') || (isNullFormPagTipTcc == 'Selecione o Tipo de Conta')) {
+            document.getElementById("FormPagTipTcc").setAttribute("class", "form-select is-invalid");
+        }
+        if ((isNullSelectFormPag != '') && (isNullSelectFormPag != 'Selecione o Tipo de Conta')) {
+            document.getElementById("FormPagTipTcc").setAttribute("class", "form-select is-valid");
+            retornaResultado++
+        }
+
     }
 
     if (document.getElementById("selectFormPag").value == 'Boleto') {
@@ -2123,7 +2140,7 @@ function isFormValid() {
     var TotalCampos = 0
     if ((document.getElementById("selectFormPag").value == 'Pix') || (document.getElementById("selectFormPag").value == 'Deposito')) {
         if (document.getElementById("selectFormPag").value == 'Deposito') {
-            TotalCampos = 15
+            TotalCampos = 16
         } else {
             TotalCampos = 13
         }
