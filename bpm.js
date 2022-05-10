@@ -687,10 +687,6 @@ function ExibeBoleto() {
 
         document.getElementById("ForPagChavePix").value = ''
 
-        document.getElementById("ForPagBanco").value = ''
-        document.getElementById("ForPagAgencia").value = ''
-        document.getElementById("ForPagConta").value = ''
-
 
         if (document.getElementById("VlrParUm").value != 0) {
 
@@ -796,21 +792,9 @@ function ExibirFormaPagamento() {
         document.getElementById("CodBolOnze").value = ''
         document.getElementById("CodBolDoze").value = ''
 
-        document.getElementById("ForPagBanco").value = ''
-        document.getElementById("ForPagAgencia").value = ''
-        document.getElementById("ForPagConta").value = ''
-
         let eVal2 = document.getElementById('PagPix');
 
         eVal2.style.display = 'flex';
-
-        let eVal = document.getElementById('PagBanco');
-
-        eVal.style.display = 'none';
-
-        let eVal1 = document.getElementById('PagBancoAge');
-
-        eVal1.style.display = 'none';
 
         let eBol1 = document.getElementById('parcela1Bol');
         eBol1.style.display = 'none';
@@ -855,15 +839,6 @@ function ExibirFormaPagamento() {
 
         document.getElementById("ForPagChavePix").value = ''
 
-
-        let eVal = document.getElementById('PagBanco');
-
-        //eVal.style.display = 'flex';
-
-        let eVal1 = document.getElementById('PagBancoAge');
-
-        //eVal1.style.display = 'flex';
-
         let eVal2 = document.getElementById('PagPix');
 
         eVal2.style.display = 'none';
@@ -898,14 +873,6 @@ function ExibirFormaPagamento() {
         let eVal2 = document.getElementById('PagPix');
 
         eVal2.style.display = 'none';
-
-        let eVal = document.getElementById('PagBanco');
-
-        eVal.style.display = 'none';
-
-        let eVal1 = document.getElementById('PagBancoAge');
-
-        eVal1.style.display = 'none';
 
         ExibeBoleto()
     }
@@ -1234,7 +1201,6 @@ function _init(data, info) {
             const selectEmpFil = map.get("selectEmpFil");
             const selectTipFor = map.get("selectTipFor");
             const selectFormPag = map.get("selectFormPag");
-            const FormPagTipTcc = map.get("FormPagTipTcc");
             const selectTipPix = map.get("selectTipPix");
             const DatSol = map.get("DatSol");
             const Fornec = map.get("Fornec");
@@ -1307,9 +1273,6 @@ function _init(data, info) {
             const CodBolDoze = map.get("CodBolDoze");
 
             const TotalPagarPar = map.get("TotalPagarPar");
-            const ForPagBanco = map.get("ForPagBanco");
-            const ForPagAgencia = map.get("ForPagAgencia");
-            const ForPagConta = map.get("ForPagConta");
             const ForPagChavePix = map.get("ForPagChavePix");
 
 
@@ -1318,7 +1281,6 @@ function _init(data, info) {
             document.getElementById("selectEmpFil").value = selectEmpFil;
             document.getElementById("selectTipFor").value = selectTipFor;
             document.getElementById("selectFormPag").value = selectFormPag;
-            document.getElementById("FormPagTipTcc").value = FormPagTipTcc;
             document.getElementById("selectTipPix").value = selectTipPix;
             document.getElementById("DatSol").setAttribute("value", DatSol);
             document.getElementById("Fornec").setAttribute("value", Fornec);
@@ -1391,9 +1353,6 @@ function _init(data, info) {
             document.getElementById("CodBolDoze").setAttribute("value", CodBolDoze);
 
             document.getElementById("TotalPagarPar").setAttribute("value", TotalPagarPar);
-            document.getElementById("ForPagBanco").setAttribute("value", ForPagBanco);
-            document.getElementById("ForPagAgencia").setAttribute("value", ForPagAgencia);
-            document.getElementById("ForPagConta").setAttribute("value", ForPagConta);
             document.getElementById("ForPagChavePix").setAttribute("value", ForPagChavePix);
 
 
@@ -1418,9 +1377,6 @@ function _saveData(data, info) {
 
     let selectFormPagamento = document.getElementById("selectFormPag");
     newData.selectFormPag = selectFormPagamento.options[selectFormPagamento.selectedIndex].value;
-
-    let FormPagTipConta = document.getElementById("FormPagTipTcc");
-    newData.FormPagTipTcc = FormPagTipConta.options[FormPagTipConta.selectedIndex].value;
 
     let selectTipoPix = document.getElementById("selectTipPix");
     newData.selectTipPix = selectTipoPix.options[selectTipoPix.selectedIndex].value;
@@ -1502,9 +1458,6 @@ function _saveData(data, info) {
     newData.CodBolDoze = document.getElementById("CodBolDoze").value;
 
     newData.TotalPagarPar = document.getElementById("TotalPagarPar").value;
-    newData.ForPagBanco = document.getElementById("ForPagBanco").value;
-    newData.ForPagAgencia = document.getElementById("ForPagAgencia").value;
-    newData.ForPagConta = document.getElementById("ForPagConta").value;
     newData.ForPagChavePix = document.getElementById("ForPagChavePix").value;
 
     let CheckInserirChavePix = document.querySelector('#CheckInserirChavePix').checked
@@ -1645,9 +1598,6 @@ function isFormValid() {
 
     if (document.getElementById("selectFormPag").value == 'Pix') {
 
-        document.getElementById("ForPagBanco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
-        document.getElementById("ForPagAgencia").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
-        document.getElementById("ForPagConta").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
         document.getElementById("CodBolUm").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
         document.getElementById("CodBolDois").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
         document.getElementById("CodBolTres").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
@@ -1686,46 +1636,10 @@ function isFormValid() {
         document.getElementById("CodBolOnze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
         document.getElementById("CodBolDoze").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
 
-       /* var isNullForPagBanco = document.getElementById("ForPagBanco").value;
-        if (isNullForPagBanco == '') {
-            document.getElementById("ForPagBanco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-        } else {
-            document.getElementById("ForPagBanco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
-            retornaResultado++
-        }
-
-        var isNullForPagAgencia = document.getElementById("ForPagAgencia").value;
-        if (isNullForPagAgencia == '') {
-            document.getElementById("ForPagAgencia").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-        } else {
-            document.getElementById("ForPagAgencia").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
-            retornaResultado++
-        }
-
-        var isNullForPagConta = document.getElementById("ForPagConta").value;
-        if (isNullForPagConta == '') {
-            document.getElementById("ForPagConta").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-        } else {
-            document.getElementById("ForPagConta").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
-            retornaResultado++
-        }
-        //Tipo de conta
-        var isNullFormPagTipTcc = document.getElementById("FormPagTipTcc").value;
-        if ((isNullFormPagTipTcc == '') || (isNullFormPagTipTcc == 'Selecione o Tipo de Conta')) {
-            document.getElementById("FormPagTipTcc").setAttribute("class", "form-select is-invalid");
-        }
-        if ((isNullFormPagTipTcc != '') && (isNullFormPagTipTcc != 'Selecione o Tipo de Conta')) {
-            document.getElementById("FormPagTipTcc").setAttribute("class", "form-select is-valid");
-            retornaResultado++
-        }*/
-
     }
 
     if (document.getElementById("selectFormPag").value == 'Boleto') {
 
-        document.getElementById("ForPagBanco").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
-        document.getElementById("ForPagAgencia").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
-        document.getElementById("ForPagConta").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
         document.getElementById("ForPagChavePix").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required");
 
 
