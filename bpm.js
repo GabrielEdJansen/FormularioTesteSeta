@@ -1177,6 +1177,7 @@ function _init(data, info) {
             // Usuário logado
             document.getElementById("nomFun").setAttribute("value", user.fullname);
             document.getElementById("emaFun").setAttribute("value", user.email);
+            document.getElementById("usuarioAprovador").value = "vazio";
         })
         .then(function () {
             info.getPlatformData().then(function (platformData) {
