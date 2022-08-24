@@ -1211,6 +1211,7 @@ function _init(data, info) {
             const NumNf = map.get("NumNf");
             const DatPre = map.get("DatPre");
             const ObsPag = map.get("ObsPag");
+            const usuarioAprovador = map.get("usuarioAprovador");
 
             const DescParUm = map.get("DescParUm");
             const VlrParUm = map.get("VlrParUm");
@@ -1291,7 +1292,8 @@ function _init(data, info) {
             document.getElementById("NumNf").value = NumNf;
             document.getElementById("DatPre").setAttribute("value", DatPre);
             document.getElementById("ObsPag").setAttribute("value", ObsPag);
-
+            document.getElementById("usuarioAprovador").setAttribute("value", usuarioAprovador);
+            
             document.getElementById("DescParUm").setAttribute("value", DescParUm);
             document.getElementById("VlrParUm").setAttribute("value", VlrParUm);
             document.getElementById("DatParUm").setAttribute("value", DatParUm);
@@ -1396,6 +1398,8 @@ function _saveData(data, info) {
 
     newData.nomFun = document.getElementById("nomFun").value;
     newData.emaFun = document.getElementById("emaFun").value;
+
+    newData.usuarioAprovador = document.getElementById("usuarioAprovador").value;
 
     newData.DescParUm = document.getElementById("DescParUm").value;
     newData.VlrParUm = document.getElementById("VlrParUm").value;
